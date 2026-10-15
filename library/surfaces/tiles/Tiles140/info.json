@@ -17,5 +17,11 @@
   "roughness": "roughness.jpg"
  },
  "avg": "#4f4b48",
- "path": "library/surfaces/tiles/Tiles140/"
+ "path": "library/surfaces/tiles/Tiles140/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "v"
 }

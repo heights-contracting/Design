@@ -18,5 +18,11 @@
   "color": "color.jpg"
  },
  "avg": "#97906f",
- "path": "library/surfaces/paving/PavingStones138/"
+ "path": "library/surfaces/paving/PavingStones138/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

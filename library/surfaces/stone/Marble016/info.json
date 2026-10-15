@@ -17,5 +17,11 @@
   "color": "color.jpg"
  },
  "avg": "#3d3e3e",
- "path": "library/surfaces/stone/Marble016/"
+ "path": "library/surfaces/stone/Marble016/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

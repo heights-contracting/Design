@@ -18,5 +18,12 @@
   "color": "color.jpg"
  },
  "avg": "#fbfaf5",
- "path": "library/surfaces/metal/Metal049A/"
+ "path": "library/surfaces/metal/Metal049A/",
+ "maps1k": {
+  "metalness": "metalness_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "v"
 }

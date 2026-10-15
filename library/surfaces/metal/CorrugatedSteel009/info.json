@@ -19,5 +19,12 @@
   "metalness": "metalness.jpg"
  },
  "avg": "#818181",
- "path": "library/surfaces/metal/CorrugatedSteel009/"
+ "path": "library/surfaces/metal/CorrugatedSteel009/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "metalness": "metalness_1k.jpg"
+ },
+ "grain": "h"
 }

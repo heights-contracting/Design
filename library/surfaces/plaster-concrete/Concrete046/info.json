@@ -17,5 +17,11 @@
   "roughness": "roughness.jpg"
  },
  "avg": "#cccdb9",
- "path": "library/surfaces/plaster-concrete/Concrete046/"
+ "path": "library/surfaces/plaster-concrete/Concrete046/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "v"
 }

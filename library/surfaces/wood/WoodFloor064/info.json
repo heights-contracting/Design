@@ -17,5 +17,11 @@
   "displacement": "displacement.jpg"
  },
  "avg": "#6c4213",
- "path": "library/surfaces/wood/WoodFloor064/"
+ "path": "library/surfaces/wood/WoodFloor064/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "h"
 }

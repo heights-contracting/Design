@@ -18,5 +18,11 @@
   "ao": "ao.jpg"
  },
  "avg": "#65832b",
- "path": "library/surfaces/ground/Grass005/"
+ "path": "library/surfaces/ground/Grass005/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "v"
 }

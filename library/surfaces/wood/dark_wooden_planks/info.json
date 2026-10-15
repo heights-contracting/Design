@@ -17,5 +17,11 @@
   "displacement": "displacement.jpg"
  },
  "avg": "#53493e",
- "path": "library/surfaces/wood/dark_wooden_planks/"
+ "path": "library/surfaces/wood/dark_wooden_planks/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "h"
 }

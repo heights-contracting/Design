@@ -3,6 +3,8 @@
 
 Usage:
     python3 tools/ingest.py <file-or-folder> [...]
+    python3 tools/ingest.py --refresh        regenerate 1K copies / grain / labels for existing items
+Friendly names come from library/labels.json.
 
 Accepts:
   * ambientCG zips          (e.g. Tiles138_2K-JPG.zip)
@@ -84,7 +86,37 @@ def save_map(src, dst, mode='RGB', q=90):
     if max(im.size) > MAX:
         im = im.resize((MAX, MAX * im.size[1] // im.size[0]), Image.LANCZOS)
     im.save(dst, 'JPEG', quality=q, optimize=True)
+    save_small(im, dst, q)
     return im.size
+
+
+SMALL = 1024
+def save_small(im, dst, q=88):
+    """1K copy next to the 2K file (role.jpg -> role_1k.jpg) for fast live views."""
+    if max(im.size) > SMALL:
+        im = im.resize((SMALL, SMALL * im.size[1] // im.size[0]), Image.LANCZOS)
+    im.save(dst[:-4] + '_1k.jpg', 'JPEG', quality=q, optimize=True)
+
+
+def grain_dir(path):
+    """'v' if the texture's grain/lines run vertically, 'h' if horizontally."""
+    a = np.asarray(Image.open(path).convert('L').resize((512, 512)), dtype=np.float32)
+    dx = np.abs(np.diff(a, axis=1)).mean()
+    dy = np.abs(np.diff(a, axis=0)).mean()
+    return 'v' if dx > dy else 'h'
+
+
+def refresh(info_path):
+    """Regenerate derived data (1K copies, grain, labels) for an existing item from its web files."""
+    d = os.path.dirname(info_path)
+    info = json.load(open(info_path))
+    if info['kind'] == 'surface':
+        for role, f in info['maps'].items():
+            if role in ('color', 'normal', 'roughness', 'metalness', 'opacity'):
+                save_small(Image.open(os.path.join(d, f)), os.path.join(d, f), 92 if role == 'normal' else 88)
+        info['maps1k'] = {r: r + '_1k.jpg' for r in info['maps'] if r in ('color', 'normal', 'roughness', 'metalness', 'opacity')}
+        info['grain'] = grain_dir(os.path.join(d, 'color.jpg'))
+    json.dump(info, open(info_path, 'w'), indent=1)
 
 
 def avg_hex(path):
@@ -132,6 +164,9 @@ def ingest_surface(folder, sid, source):
                         92 if role == 'normal' else 90)
         maps[role] = role + '.jpg'
         res = res or size
+    for f in os.listdir(out):  # only keep 1K copies of the maps the viewers use
+        if f.endswith('_1k.jpg') and f[:-7] not in ('color', 'normal', 'roughness', 'metalness', 'opacity'):
+            os.remove(os.path.join(out, f))
     pv = Image.open(preview).convert('RGB') if preview else load_any(found['color'])
     w, h = pv.size
     s = min(w, h)
@@ -141,6 +176,8 @@ def ingest_surface(folder, sid, source):
     info = dict(id=sid, name=nice_name(sid), kind='surface', category=cat, source=source,
                 licence='CC0', url=url, size=list(res), maps=maps,
                 avg=avg_hex(os.path.join(out, 'color.jpg')),
+                maps1k={r: r + '_1k.jpg' for r in maps if r in ('color', 'normal', 'roughness', 'metalness', 'opacity')},
+                grain=grain_dir(os.path.join(out, 'color.jpg')),
                 path=f'library/surfaces/{cat}/{sid}/')
     json.dump(info, open(os.path.join(out, 'info.json'), 'w'), indent=1)
     print('  surface', cat, sid, res, sorted(maps))
@@ -214,15 +251,26 @@ def ingest_path(p):
 
 def rebuild_catalog():
     items = []
+    lp = os.path.join(LIB, 'labels.json')
+    labels = json.load(open(lp)) if os.path.exists(lp) else {}
     for dp, _, fs in os.walk(LIB):
         if 'info.json' in fs:
-            items.append(json.load(open(os.path.join(dp, 'info.json'))))
+            it = json.load(open(os.path.join(dp, 'info.json')))
+            if it['id'] in labels:
+                it['name'] = labels[it['id']]
+            items.append(it)
     items.sort(key=lambda d: (d['kind'] != 'surface', d['category'], d['id']))
     json.dump({'items': items}, open(os.path.join(LIB, 'catalog.json'), 'w'), indent=1)
     print('catalog:', len(items), 'items')
 
 
 if __name__ == '__main__':
+    if sys.argv[1:] == ['--refresh']:
+        for dp, _, fs in os.walk(LIB):
+            if 'info.json' in fs:
+                refresh(os.path.join(dp, 'info.json'))
+        rebuild_catalog()
+        sys.exit()
     for arg in sys.argv[1:]:
         paths = [os.path.join(arg, f) for f in sorted(os.listdir(arg))] if os.path.isdir(arg) and not any(
             f.lower().endswith(('.jpg', '.png', '.exr')) for f in os.listdir(arg)) else [arg]

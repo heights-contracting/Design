@@ -17,5 +17,11 @@
   "color": "color.jpg"
  },
  "avg": "#cdcac7",
- "path": "library/surfaces/stone/Onyx015/"
+ "path": "library/surfaces/stone/Onyx015/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

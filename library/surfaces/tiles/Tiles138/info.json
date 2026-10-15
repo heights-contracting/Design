@@ -18,5 +18,11 @@
   "normal": "normal.jpg"
  },
  "avg": "#353536",
- "path": "library/surfaces/tiles/Tiles138/"
+ "path": "library/surfaces/tiles/Tiles138/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "v"
 }

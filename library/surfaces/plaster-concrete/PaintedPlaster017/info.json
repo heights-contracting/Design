@@ -17,5 +17,11 @@
   "displacement": "displacement.jpg"
  },
  "avg": "#bebebb",
- "path": "library/surfaces/plaster-concrete/PaintedPlaster017/"
+ "path": "library/surfaces/plaster-concrete/PaintedPlaster017/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "h"
 }

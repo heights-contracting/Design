@@ -18,5 +18,12 @@
   "normal": "normal.jpg"
  },
  "avg": "#6e6d6a",
- "path": "library/surfaces/metal/Metal063/"
+ "path": "library/surfaces/metal/Metal063/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "metalness": "metalness_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "h"
 }

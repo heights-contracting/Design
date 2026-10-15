@@ -17,5 +17,11 @@
   "normal": "normal.jpg"
  },
  "avg": "#5c2a17",
- "path": "library/surfaces/wood/dark_wood/"
+ "path": "library/surfaces/wood/dark_wood/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "h"
 }

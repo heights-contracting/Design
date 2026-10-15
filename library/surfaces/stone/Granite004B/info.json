@@ -17,5 +17,11 @@
   "color": "color.jpg"
  },
  "avg": "#8f7d66",
- "path": "library/surfaces/stone/Granite004B/"
+ "path": "library/surfaces/stone/Granite004B/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

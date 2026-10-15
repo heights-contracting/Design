@@ -18,5 +18,12 @@
   "roughness": "roughness.jpg"
  },
  "avg": "#fee29c",
- "path": "library/surfaces/metal/Metal048A/"
+ "path": "library/surfaces/metal/Metal048A/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg",
+  "metalness": "metalness_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "v"
 }

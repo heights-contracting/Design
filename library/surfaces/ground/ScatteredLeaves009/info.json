@@ -18,5 +18,11 @@
   "displacement": "displacement.jpg"
  },
  "avg": "#906d39",
- "path": "library/surfaces/ground/ScatteredLeaves009/"
+ "path": "library/surfaces/ground/ScatteredLeaves009/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "v"
 }

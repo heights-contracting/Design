@@ -18,5 +18,11 @@
   "normal": "normal.jpg"
  },
  "avg": "#a67863",
- "path": "library/surfaces/brick/Bricks104/"
+ "path": "library/surfaces/brick/Bricks104/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "v"
 }

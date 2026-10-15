@@ -17,5 +17,11 @@
   "color": "color.jpg"
  },
  "avg": "#d7d3cf",
- "path": "library/surfaces/plaster-concrete/Plaster001/"
+ "path": "library/surfaces/plaster-concrete/Plaster001/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "v"
 }

@@ -2,7 +2,7 @@
  "items": [
   {
    "id": "Bricks075A",
-   "name": "Bricks 075A",
+   "name": "Natural stone wall",
    "kind": "surface",
    "category": "brick",
    "source": "ambientCG",
@@ -20,11 +20,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#8d836d",
-   "path": "library/surfaces/brick/Bricks075A/"
+   "path": "library/surfaces/brick/Bricks075A/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Bricks097",
-   "name": "Bricks 097",
+   "name": "Old red brick",
    "kind": "surface",
    "category": "brick",
    "source": "ambientCG",
@@ -42,11 +48,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#856a53",
-   "path": "library/surfaces/brick/Bricks097/"
+   "path": "library/surfaces/brick/Bricks097/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Bricks102",
-   "name": "Bricks 102",
+   "name": "Rustic stone blocks",
    "kind": "surface",
    "category": "brick",
    "source": "ambientCG",
@@ -64,11 +76,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#817459",
-   "path": "library/surfaces/brick/Bricks102/"
+   "path": "library/surfaces/brick/Bricks102/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Bricks104",
-   "name": "Bricks 104",
+   "name": "Red brick",
    "kind": "surface",
    "category": "brick",
    "source": "ambientCG",
@@ -86,11 +104,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#a67863",
-   "path": "library/surfaces/brick/Bricks104/"
+   "path": "library/surfaces/brick/Bricks104/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Bricks105",
-   "name": "Bricks 105",
+   "name": "Beige brick",
    "kind": "surface",
    "category": "brick",
    "source": "ambientCG",
@@ -108,11 +132,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#b8946a",
-   "path": "library/surfaces/brick/Bricks105/"
+   "path": "library/surfaces/brick/Bricks105/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Carpet016",
-   "name": "Carpet 016",
+   "name": "Beige carpet",
    "kind": "surface",
    "category": "fabric",
    "source": "ambientCG",
@@ -130,11 +160,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#bbb093",
-   "path": "library/surfaces/fabric/Carpet016/"
+   "path": "library/surfaces/fabric/Carpet016/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Fabric084",
-   "name": "Fabric 084",
+   "name": "Blue fabric",
    "kind": "surface",
    "category": "fabric",
    "source": "ambientCG",
@@ -152,11 +188,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#5b8dbf",
-   "path": "library/surfaces/fabric/Fabric084/"
+   "path": "library/surfaces/fabric/Fabric084/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Fabric085",
-   "name": "Fabric 085",
+   "name": "Orange knit",
    "kind": "surface",
    "category": "fabric",
    "source": "ambientCG",
@@ -174,11 +216,17 @@
     "ao": "ao.jpg"
    },
    "avg": "#9f5035",
-   "path": "library/surfaces/fabric/Fabric085/"
+   "path": "library/surfaces/fabric/Fabric085/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Grass001",
-   "name": "Grass 001",
+   "name": "Dark grass",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -196,11 +244,17 @@
     "color": "color.jpg"
    },
    "avg": "#445b28",
-   "path": "library/surfaces/ground/Grass001/"
+   "path": "library/surfaces/ground/Grass001/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Grass005",
-   "name": "Grass 005",
+   "name": "Bright grass",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -218,11 +272,17 @@
     "ao": "ao.jpg"
    },
    "avg": "#65832b",
-   "path": "library/surfaces/ground/Grass005/"
+   "path": "library/surfaces/ground/Grass005/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Gravel043",
-   "name": "Gravel 043",
+   "name": "Grey gravel",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -240,11 +300,17 @@
     "color": "color.jpg"
    },
    "avg": "#6a6b67",
-   "path": "library/surfaces/ground/Gravel043/"
+   "path": "library/surfaces/ground/Gravel043/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Ground037",
-   "name": "Ground 037",
+   "name": "Mossy ground",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -262,11 +328,17 @@
     "color": "color.jpg"
    },
    "avg": "#989257",
-   "path": "library/surfaces/ground/Ground037/"
+   "path": "library/surfaces/ground/Ground037/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Ground054",
-   "name": "Ground 054",
+   "name": "Sand",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -284,11 +356,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#9b8a6d",
-   "path": "library/surfaces/ground/Ground054/"
+   "path": "library/surfaces/ground/Ground054/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Ground068",
-   "name": "Ground 068",
+   "name": "Moss and soil",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -306,11 +384,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#6e5b2a",
-   "path": "library/surfaces/ground/Ground068/"
+   "path": "library/surfaces/ground/Ground068/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Ground103",
-   "name": "Ground 103",
+   "name": "Dry soil",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -328,11 +412,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#7a6851",
-   "path": "library/surfaces/ground/Ground103/"
+   "path": "library/surfaces/ground/Ground103/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Ground106",
-   "name": "Ground 106",
+   "name": "Soil with stones",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -350,11 +440,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#756147",
-   "path": "library/surfaces/ground/Ground106/"
+   "path": "library/surfaces/ground/Ground106/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Ground108",
-   "name": "Ground 108",
+   "name": "Rocky ground",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -372,11 +468,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#786a54",
-   "path": "library/surfaces/ground/Ground108/"
+   "path": "library/surfaces/ground/Ground108/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Ground109",
-   "name": "Ground 109",
+   "name": "Earth",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -394,11 +496,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#7d6e54",
-   "path": "library/surfaces/ground/Ground109/"
+   "path": "library/surfaces/ground/Ground109/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Ground110",
-   "name": "Ground 110",
+   "name": "Dark rubble",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -416,11 +524,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#635a4e",
-   "path": "library/surfaces/ground/Ground110/"
+   "path": "library/surfaces/ground/Ground110/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Ground112",
-   "name": "Ground 112",
+   "name": "Dusty ground",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -438,11 +552,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#756756",
-   "path": "library/surfaces/ground/Ground112/"
+   "path": "library/surfaces/ground/Ground112/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "ScatteredLeaves009",
-   "name": "Scattered Leaves 009",
+   "name": "Fallen leaves",
    "kind": "surface",
    "category": "ground",
    "source": "ambientCG",
@@ -460,11 +580,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#906d39",
-   "path": "library/surfaces/ground/ScatteredLeaves009/"
+   "path": "library/surfaces/ground/ScatteredLeaves009/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "CorrugatedSteel009",
-   "name": "Corrugated Steel 009",
+   "name": "Corrugated steel",
    "kind": "surface",
    "category": "metal",
    "source": "ambientCG",
@@ -483,11 +609,18 @@
     "metalness": "metalness.jpg"
    },
    "avg": "#818181",
-   "path": "library/surfaces/metal/CorrugatedSteel009/"
+   "path": "library/surfaces/metal/CorrugatedSteel009/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "metalness": "metalness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Metal046B",
-   "name": "Metal 046B",
+   "name": "Dark metal",
    "kind": "surface",
    "category": "metal",
    "source": "ambientCG",
@@ -505,11 +638,18 @@
     "color": "color.jpg"
    },
    "avg": "#3e3e3e",
-   "path": "library/surfaces/metal/Metal046B/"
+   "path": "library/surfaces/metal/Metal046B/",
+   "maps1k": {
+    "metalness": "metalness_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Metal048A",
-   "name": "Metal 048A",
+   "name": "Brass",
    "kind": "surface",
    "category": "metal",
    "source": "ambientCG",
@@ -527,11 +667,18 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#fee29c",
-   "path": "library/surfaces/metal/Metal048A/"
+   "path": "library/surfaces/metal/Metal048A/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "metalness": "metalness_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Metal049A",
-   "name": "Metal 049A",
+   "name": "Polished steel",
    "kind": "surface",
    "category": "metal",
    "source": "ambientCG",
@@ -549,11 +696,18 @@
     "color": "color.jpg"
    },
    "avg": "#fbfaf5",
-   "path": "library/surfaces/metal/Metal049A/"
+   "path": "library/surfaces/metal/Metal049A/",
+   "maps1k": {
+    "metalness": "metalness_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Metal063",
-   "name": "Metal 063",
+   "name": "Black steel",
    "kind": "surface",
    "category": "metal",
    "source": "ambientCG",
@@ -571,11 +725,18 @@
     "normal": "normal.jpg"
    },
    "avg": "#6e6d6a",
-   "path": "library/surfaces/metal/Metal063/"
+   "path": "library/surfaces/metal/Metal063/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "metalness": "metalness_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "PavingStones138",
-   "name": "Paving Stones 138",
+   "name": "Pavers with grass joints",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -593,11 +754,17 @@
     "color": "color.jpg"
    },
    "avg": "#97906f",
-   "path": "library/surfaces/paving/PavingStones138/"
+   "path": "library/surfaces/paving/PavingStones138/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "PavingStones150",
-   "name": "Paving Stones 150",
+   "name": "Cobble setts",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -615,11 +782,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#7c715d",
-   "path": "library/surfaces/paving/PavingStones150/"
+   "path": "library/surfaces/paving/PavingStones150/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "PavingStones151",
-   "name": "Paving Stones 151",
+   "name": "Granite setts",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -637,11 +810,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#766e62",
-   "path": "library/surfaces/paving/PavingStones151/"
+   "path": "library/surfaces/paving/PavingStones151/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Road008C",
-   "name": "Road 008C",
+   "name": "Asphalt 1",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -659,11 +838,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#41413e",
-   "path": "library/surfaces/paving/Road008C/"
+   "path": "library/surfaces/paving/Road008C/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Road011C",
-   "name": "Road 011C",
+   "name": "Asphalt 2",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -681,11 +866,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#3f3f3c",
-   "path": "library/surfaces/paving/Road011C/"
+   "path": "library/surfaces/paving/Road011C/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Road012C",
-   "name": "Road 012C",
+   "name": "Asphalt 3",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -703,11 +894,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#41413e",
-   "path": "library/surfaces/paving/Road012C/"
+   "path": "library/surfaces/paving/Road012C/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Road015C",
-   "name": "Road 015C",
+   "name": "Asphalt 4",
    "kind": "surface",
    "category": "paving",
    "source": "ambientCG",
@@ -725,11 +922,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#3d3c3a",
-   "path": "library/surfaces/paving/Road015C/"
+   "path": "library/surfaces/paving/Road015C/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Concrete046",
-   "name": "Concrete 046",
+   "name": "White concrete",
    "kind": "surface",
    "category": "plaster-concrete",
    "source": "ambientCG",
@@ -746,11 +949,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#cccdb9",
-   "path": "library/surfaces/plaster-concrete/Concrete046/"
+   "path": "library/surfaces/plaster-concrete/Concrete046/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Concrete047A",
-   "name": "Concrete 047A",
+   "name": "Grey-beige concrete",
    "kind": "surface",
    "category": "plaster-concrete",
    "source": "ambientCG",
@@ -768,11 +977,17 @@
     "color": "color.jpg"
    },
    "avg": "#908773",
-   "path": "library/surfaces/plaster-concrete/Concrete047A/"
+   "path": "library/surfaces/plaster-concrete/Concrete047A/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Concrete048",
-   "name": "Concrete 048",
+   "name": "Beige concrete",
    "kind": "surface",
    "category": "plaster-concrete",
    "source": "ambientCG",
@@ -791,11 +1006,18 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#a29787",
-   "path": "library/surfaces/plaster-concrete/Concrete048/"
+   "path": "library/surfaces/plaster-concrete/Concrete048/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "metalness": "metalness_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "PaintedPlaster017",
-   "name": "Painted Plaster 017",
+   "name": "White painted plaster",
    "kind": "surface",
    "category": "plaster-concrete",
    "source": "ambientCG",
@@ -812,11 +1034,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#bebebb",
-   "path": "library/surfaces/plaster-concrete/PaintedPlaster017/"
+   "path": "library/surfaces/plaster-concrete/PaintedPlaster017/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Plaster001",
-   "name": "Plaster 001",
+   "name": "White plaster",
    "kind": "surface",
    "category": "plaster-concrete",
    "source": "ambientCG",
@@ -833,7 +1061,13 @@
     "color": "color.jpg"
    },
    "avg": "#d7d3cf",
-   "path": "library/surfaces/plaster-concrete/Plaster001/"
+   "path": "library/surfaces/plaster-concrete/Plaster001/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "clay_plaster",
@@ -854,11 +1088,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#72593b",
-   "path": "library/surfaces/plaster-concrete/clay_plaster/"
+   "path": "library/surfaces/plaster-concrete/clay_plaster/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Granite004B",
-   "name": "Granite 004B",
+   "name": "Beige granite",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -875,11 +1115,17 @@
     "color": "color.jpg"
    },
    "avg": "#8f7d66",
-   "path": "library/surfaces/stone/Granite004B/"
+   "path": "library/surfaces/stone/Granite004B/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Marble016",
-   "name": "Marble 016",
+   "name": "Black marble",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -896,11 +1142,17 @@
     "color": "color.jpg"
    },
    "avg": "#3d3e3e",
-   "path": "library/surfaces/stone/Marble016/"
+   "path": "library/surfaces/stone/Marble016/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Onyx015",
-   "name": "Onyx 015",
+   "name": "White onyx",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -917,11 +1169,17 @@
     "color": "color.jpg"
    },
    "avg": "#cdcac7",
-   "path": "library/surfaces/stone/Onyx015/"
+   "path": "library/surfaces/stone/Onyx015/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Rock058",
-   "name": "Rock 058",
+   "name": "Blue-grey rock",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -939,11 +1197,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#4e545b",
-   "path": "library/surfaces/stone/Rock058/"
+   "path": "library/surfaces/stone/Rock058/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Rock063",
-   "name": "Rock 063",
+   "name": "Mossy rock",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -961,11 +1225,17 @@
     "color": "color.jpg"
    },
    "avg": "#817831",
-   "path": "library/surfaces/stone/Rock063/"
+   "path": "library/surfaces/stone/Rock063/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Rock064",
-   "name": "Rock 064",
+   "name": "Mossy stacked stone",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -983,11 +1253,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#746d47",
-   "path": "library/surfaces/stone/Rock064/"
+   "path": "library/surfaces/stone/Rock064/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Travertine001",
-   "name": "Travertine 001",
+   "name": "Travertine",
    "kind": "surface",
    "category": "stone",
    "source": "ambientCG",
@@ -1005,11 +1281,17 @@
     "color": "color.jpg"
    },
    "avg": "#a59881",
-   "path": "library/surfaces/stone/Travertine001/"
+   "path": "library/surfaces/stone/Travertine001/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Tiles138",
-   "name": "Tiles 138",
+   "name": "Black square tiles",
    "kind": "surface",
    "category": "tiles",
    "source": "ambientCG",
@@ -1027,11 +1309,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#353536",
-   "path": "library/surfaces/tiles/Tiles138/"
+   "path": "library/surfaces/tiles/Tiles138/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Tiles139",
-   "name": "Tiles 139",
+   "name": "Beige limestone tiles",
    "kind": "surface",
    "category": "tiles",
    "source": "ambientCG",
@@ -1048,11 +1336,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#b39f89",
-   "path": "library/surfaces/tiles/Tiles139/"
+   "path": "library/surfaces/tiles/Tiles139/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Tiles140",
-   "name": "Tiles 140",
+   "name": "Dark stone tiles",
    "kind": "surface",
    "category": "tiles",
    "source": "ambientCG",
@@ -1069,11 +1363,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#4f4b48",
-   "path": "library/surfaces/tiles/Tiles140/"
+   "path": "library/surfaces/tiles/Tiles140/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Tiles141",
-   "name": "Tiles 141",
+   "name": "White stone tiles",
    "kind": "surface",
    "category": "tiles",
    "source": "ambientCG",
@@ -1090,11 +1390,17 @@
     "color": "color.jpg"
    },
    "avg": "#d2cac2",
-   "path": "library/surfaces/tiles/Tiles141/"
+   "path": "library/surfaces/tiles/Tiles141/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Tiles144",
-   "name": "Tiles 144",
+   "name": "Honey stone tiles",
    "kind": "surface",
    "category": "tiles",
    "source": "ambientCG",
@@ -1111,11 +1417,17 @@
     "color": "color.jpg"
    },
    "avg": "#936330",
-   "path": "library/surfaces/tiles/Tiles144/"
+   "path": "library/surfaces/tiles/Tiles144/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Bark014",
-   "name": "Bark 014",
+   "name": "Tree bark",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1133,11 +1445,17 @@
     "ao": "ao.jpg"
    },
    "avg": "#796650",
-   "path": "library/surfaces/wood/Bark014/"
+   "path": "library/surfaces/wood/Bark014/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Wood049",
-   "name": "Wood 049",
+   "name": "Grey oak",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1154,11 +1472,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#7b634d",
-   "path": "library/surfaces/wood/Wood049/"
+   "path": "library/surfaces/wood/Wood049/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Wood051",
-   "name": "Wood 051",
+   "name": "Dark walnut",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1175,11 +1499,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#41342e",
-   "path": "library/surfaces/wood/Wood051/"
+   "path": "library/surfaces/wood/Wood051/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Wood058",
-   "name": "Wood 058",
+   "name": "Brown oak",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1196,11 +1526,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#a0795b",
-   "path": "library/surfaces/wood/Wood058/"
+   "path": "library/surfaces/wood/Wood058/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Wood092",
-   "name": "Wood 092",
+   "name": "Teak",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1217,11 +1553,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#af723f",
-   "path": "library/surfaces/wood/Wood092/"
+   "path": "library/surfaces/wood/Wood092/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "Wood094",
-   "name": "Wood 094",
+   "name": "Natural oak",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1238,11 +1580,17 @@
     "roughness": "roughness.jpg"
    },
    "avg": "#a78264",
-   "path": "library/surfaces/wood/Wood094/"
+   "path": "library/surfaces/wood/Wood094/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Wood095",
-   "name": "Wood 095",
+   "name": "Light pine",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1259,11 +1607,17 @@
     "color": "color.jpg"
    },
    "avg": "#cc9c6e",
-   "path": "library/surfaces/wood/Wood095/"
+   "path": "library/surfaces/wood/Wood095/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "Wood096",
-   "name": "Wood 096",
+   "name": "Knotty white pine",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1280,11 +1634,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#b39d84",
-   "path": "library/surfaces/wood/Wood096/"
+   "path": "library/surfaces/wood/Wood096/",
+   "maps1k": {
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "v"
   },
   {
    "id": "WoodFloor051",
-   "name": "Wood Floor 051",
+   "name": "Honey parquet",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1302,11 +1662,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#9a7a5d",
-   "path": "library/surfaces/wood/WoodFloor051/"
+   "path": "library/surfaces/wood/WoodFloor051/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "WoodFloor064",
-   "name": "Wood Floor 064",
+   "name": "Oak planks",
    "kind": "surface",
    "category": "wood",
    "source": "ambientCG",
@@ -1323,11 +1689,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#6c4213",
-   "path": "library/surfaces/wood/WoodFloor064/"
+   "path": "library/surfaces/wood/WoodFloor064/",
+   "maps1k": {
+    "normal": "normal_1k.jpg",
+    "color": "color_1k.jpg",
+    "roughness": "roughness_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "dark_wood",
-   "name": "Dark wood",
+   "name": "Mahogany",
    "kind": "surface",
    "category": "wood",
    "source": "Poly Haven",
@@ -1344,11 +1716,17 @@
     "normal": "normal.jpg"
    },
    "avg": "#5c2a17",
-   "path": "library/surfaces/wood/dark_wood/"
+   "path": "library/surfaces/wood/dark_wood/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "dark_wooden_planks",
-   "name": "Dark wooden planks",
+   "name": "Weathered planks",
    "kind": "surface",
    "category": "wood",
    "source": "Poly Haven",
@@ -1365,11 +1743,17 @@
     "displacement": "displacement.jpg"
    },
    "avg": "#53493e",
-   "path": "library/surfaces/wood/dark_wooden_planks/"
+   "path": "library/surfaces/wood/dark_wooden_planks/",
+   "maps1k": {
+    "roughness": "roughness_1k.jpg",
+    "color": "color_1k.jpg",
+    "normal": "normal_1k.jpg"
+   },
+   "grain": "h"
   },
   {
    "id": "kiara_1_dawn",
-   "name": "Kiara 1 dawn",
+   "name": "Dawn / dusk sky",
    "kind": "sky",
    "category": "sky",
    "source": "Poly Haven",
@@ -1387,7 +1771,7 @@
   },
   {
    "id": "rooitou_park",
-   "name": "Rooitou park",
+   "name": "Clear day sky",
    "kind": "sky",
    "category": "sky",
    "source": "Poly Haven",

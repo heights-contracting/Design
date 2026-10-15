@@ -1,0 +1,22 @@
+{
+ "Bark014": "Tree bark", "Wood049": "Grey oak", "Wood051": "Dark walnut", "Wood058": "Brown oak", "Wood092": "Teak",
+ "Wood094": "Natural oak", "Wood095": "Light pine", "Wood096": "Knotty white pine", "WoodFloor051": "Honey parquet",
+ "WoodFloor064": "Oak planks", "dark_wood": "Mahogany", "dark_wooden_planks": "Weathered planks",
+ "Granite004B": "Beige granite", "Marble016": "Black marble", "Onyx015": "White onyx", "Rock058": "Blue-grey rock",
+ "Rock063": "Mossy rock", "Rock064": "Mossy stacked stone", "Travertine001": "Travertine",
+ "Tiles138": "Black square tiles", "Tiles139": "Beige limestone tiles", "Tiles140": "Dark stone tiles",
+ "Tiles141": "White stone tiles", "Tiles144": "Honey stone tiles",
+ "Concrete046": "White concrete", "Concrete047A": "Grey-beige concrete", "Concrete048": "Beige concrete",
+ "PaintedPlaster017": "White painted plaster", "Plaster001": "White plaster", "clay_plaster": "Clay plaster",
+ "Bricks075A": "Natural stone wall", "Bricks097": "Old red brick", "Bricks102": "Rustic stone blocks",
+ "Bricks104": "Red brick", "Bricks105": "Beige brick",
+ "CorrugatedSteel009": "Corrugated steel", "Metal046B": "Dark metal", "Metal048A": "Brass", "Metal049A": "Polished steel",
+ "Metal063": "Black steel",
+ "PavingStones138": "Pavers with grass joints", "PavingStones150": "Cobble setts", "PavingStones151": "Granite setts",
+ "Road008C": "Asphalt 1", "Road011C": "Asphalt 2", "Road012C": "Asphalt 3", "Road015C": "Asphalt 4",
+ "Grass001": "Dark grass", "Grass005": "Bright grass", "Gravel043": "Grey gravel", "Ground037": "Mossy ground",
+ "Ground054": "Sand", "Ground068": "Moss and soil", "Ground103": "Dry soil", "Ground106": "Soil with stones",
+ "Ground108": "Rocky ground", "Ground109": "Earth", "Ground110": "Dark rubble", "Ground112": "Dusty ground",
+ "ScatteredLeaves009": "Fallen leaves", "Carpet016": "Beige carpet", "Fabric084": "Blue fabric", "Fabric085": "Orange knit",
+ "kiara_1_dawn": "Dawn / dusk sky", "rooitou_park": "Clear day sky"
+}

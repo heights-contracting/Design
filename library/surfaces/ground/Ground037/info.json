@@ -18,5 +18,11 @@
   "color": "color.jpg"
  },
  "avg": "#989257",
- "path": "library/surfaces/ground/Ground037/"
+ "path": "library/surfaces/ground/Ground037/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "v"
 }

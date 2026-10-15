@@ -17,5 +17,11 @@
   "roughness": "roughness.jpg"
  },
  "avg": "#a78264",
- "path": "library/surfaces/wood/Wood094/"
+ "path": "library/surfaces/wood/Wood094/",
+ "maps1k": {
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg"
+ },
+ "grain": "h"
 }

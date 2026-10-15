@@ -17,5 +17,11 @@
   "color": "color.jpg"
  },
  "avg": "#d2cac2",
- "path": "library/surfaces/tiles/Tiles141/"
+ "path": "library/surfaces/tiles/Tiles141/",
+ "maps1k": {
+  "normal": "normal_1k.jpg",
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

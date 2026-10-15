@@ -18,5 +18,11 @@
   "color": "color.jpg"
  },
  "avg": "#a59881",
- "path": "library/surfaces/stone/Travertine001/"
+ "path": "library/surfaces/stone/Travertine001/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }

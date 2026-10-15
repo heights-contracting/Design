@@ -18,5 +18,11 @@
   "ao": "ao.jpg"
  },
  "avg": "#9f5035",
- "path": "library/surfaces/fabric/Fabric085/"
+ "path": "library/surfaces/fabric/Fabric085/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "color": "color_1k.jpg",
+  "normal": "normal_1k.jpg"
+ },
+ "grain": "h"
 }

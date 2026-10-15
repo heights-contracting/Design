@@ -18,5 +18,11 @@
   "color": "color.jpg"
  },
  "avg": "#445b28",
- "path": "library/surfaces/ground/Grass001/"
+ "path": "library/surfaces/ground/Grass001/",
+ "maps1k": {
+  "roughness": "roughness_1k.jpg",
+  "normal": "normal_1k.jpg",
+  "color": "color_1k.jpg"
+ },
+ "grain": "h"
 }
