@@ -33,7 +33,8 @@ Design/
 ├── library/                 shared, reused by every project
 │   ├── index.html           visual catalogue
 │   ├── catalog.json         generated list of all items
-│   ├── surfaces/<category>/<id>/   color.jpg normal.jpg roughness.jpg [ao displacement metalness] preview.jpg info.json
+│   ├── labels.json          friendly names shown in dropdowns (id → name)
+│   ├── surfaces/<category>/<id>/   color.jpg normal.jpg roughness.jpg [ao displacement metalness] + *_1k.jpg copies, preview.jpg, info.json
 │   ├── skies/<id>/          <id>_2k.hdr <id>_1k.hdr preview.jpg info.json
 │   ├── brand/               logos
 │   └── inbox/               where new downloads are uploaded
@@ -59,7 +60,9 @@ Design/
 - **Ids** are the original asset ids (`Tiles138`, `dark_wood`, `kiara_1_dawn`), so the source page is always findable.
 - **Categories**: tiles, stone, brick, plaster-concrete, wood, metal, paving, ground, fabric (+ sky).
 - **Map names are fixed**: `color.jpg` (sRGB), `normal.jpg` (OpenGL convention), `roughness.jpg`, `ao.jpg`, `displacement.jpg`, `metalness.jpg` (all linear data, grayscale).
-- **Web size cap 2K**. Originals go to the `sources` branch.
+- **Web size cap 2K**, plus `_1k` copies of colour/normal/roughness/metalness for fast live views. Originals go to the `sources` branch.
+- `info.json` also records `grain` (`h`/`v`, the direction of wood grain or lines) so viewers can orient timber correctly.
+- After adding names to `labels.json`, run `python3 tools/ingest.py --refresh`.
 - **Formats**: colour photos JPG q90, normal JPG q92 (converted from EXR/PNG when needed), skies Radiance `.hdr` in 2K and 1K.
 - **Licences**: only CC0 (ambientCG, Poly Haven) or Heights' own photos. `info.json` records source, URL and licence.
 - `catalog.json` is generated. Never edit it by hand; rerun `tools/ingest.py`.

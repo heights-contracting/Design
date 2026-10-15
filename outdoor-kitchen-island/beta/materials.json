@@ -1,0 +1,166 @@
+{
+ "library": "../../library/",
+ "skies": {
+  "morning": {
+   "id": "kiara_1_dawn"
+  },
+  "day": {
+   "id": "rooitou_park"
+  },
+  "evening": {
+   "id": "kiara_1_dawn"
+  },
+  "night": {
+   "id": "kiara_1_dawn"
+  }
+ },
+ "categorySize": {
+  "tiles": 1.2,
+  "stone": 1.0,
+  "brick": 1.4,
+  "plaster-concrete": 2.0,
+  "wood": 1.6,
+  "metal": 0.8,
+  "paving": 1.6,
+  "ground": 3.0,
+  "fabric": 1.0
+ },
+ "sizes": {
+  "Tiles139": 1.6,
+  "Tiles141": 1.6,
+  "Tiles140": 1.6,
+  "Tiles138": 1.0,
+  "Tiles144": 1.4,
+  "Bricks075A": 1.6,
+  "Bricks102": 1.8,
+  "Granite004B": 0.9,
+  "Travertine001": 1.2
+ },
+ "slots": [
+  {
+   "key": "frame",
+   "label": "Timber frame",
+   "cats": [
+    "wood"
+   ],
+   "default": "Wood058",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "top",
+   "label": "Worktops",
+   "cats": [
+    "stone",
+    "plaster-concrete",
+    "tiles"
+   ],
+   "default": "Granite004B",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "floor",
+   "label": "Floor",
+   "cats": [
+    "tiles",
+    "stone",
+    "paving",
+    "plaster-concrete",
+    "wood"
+   ],
+   "default": "Tiles139",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "feature",
+   "label": "Back wall panel",
+   "cats": [
+    "brick",
+    "stone",
+    "plaster-concrete",
+    "tiles",
+    "wood"
+   ],
+   "default": "Bricks075A",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "walls",
+   "label": "Walls and planters",
+   "cats": [
+    "plaster-concrete",
+    "brick",
+    "stone"
+   ],
+   "default": "Concrete048",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "clad",
+   "label": "Island ends",
+   "cats": [
+    "stone",
+    "brick",
+    "plaster-concrete",
+    "tiles",
+    "wood"
+   ],
+   "default": "Bricks102",
+   "tint": "#ffffff"
+  },
+  {
+   "key": "cab",
+   "label": "Cabinet fronts",
+   "cats": [
+    "wood",
+    "metal"
+   ],
+   "default": "Wood051",
+   "tint": "#6b6b6b"
+  },
+  {
+   "key": "steel",
+   "label": "Appliances",
+   "cats": [
+    "metal"
+   ],
+   "default": "local:brushed",
+   "tint": "#ffffff",
+   "extra": [
+    {
+     "id": "local:brushed",
+     "name": "Brushed stainless"
+    }
+   ]
+  },
+  {
+   "key": "ground",
+   "label": "Ground outside",
+   "cats": [
+    "ground",
+    "paving",
+    "plaster-concrete",
+    "stone"
+   ],
+   "default": "Gravel043",
+   "tint": "#ffffff"
+  }
+ ],
+ "pvc": [
+  {
+   "name": "Cream",
+   "color": "#e6e2b0"
+  },
+  {
+   "name": "Light grey",
+   "color": "#a7a9a9"
+  },
+  {
+   "name": "White",
+   "color": "#ecebe6"
+  },
+  {
+   "name": "Dark grey",
+   "color": "#6e737a"
+  }
+ ]
+}
