@@ -17,7 +17,7 @@ const loaderTxt = t => { const sp = loader.querySelector('span'); if (sp) sp.inn
 function fail(msg) { loaderTxt(msg); loader.classList.remove('done'); loader.hidden = false; }
 window.addEventListener('error', e => { if (!loader.classList.contains('done')) fail('Something went wrong while loading<br><small style="letter-spacing:0;text-transform:none;opacity:.7">' + String(e.message || '').slice(0, 140) + '</small>'); });
 
-const MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+const MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);   // iPads report a Mac user agent
 const DPR = Math.min(window.devicePixelRatio || 1, MOBILE ? 2 : 2.5);
 const store = {
   get(k) { try { return JSON.parse(localStorage.getItem('hcIsland.' + k)); } catch (e) { return null; } },
@@ -25,7 +25,7 @@ const store = {
 };
 
 let renderer;
-try { renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' }); }
+try { renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance', preserveDrawingBuffer: true }); }
 catch (e) { stage.insertAdjacentHTML('afterbegin', '<p class="fail">The 3D view needs WebGL, which this browser has turned off.</p>'); loader.hidden = true; throw e; }
 renderer.setPixelRatio(DPR);
 renderer.toneMapping = THREE.AgXToneMapping;
@@ -57,13 +57,14 @@ function loadTex(url, srgb) {
   texCache.set(key, p); return p;
 }
 const hdrCache = new Map();
-function loadHDR(id) {
-  if (hdrCache.has(id)) return hdrCache.get(id);
+function loadHDR(id, res = '1k') {
+  const key = id + '|' + res;
+  if (hdrCache.has(key)) return hdrCache.get(key);
   const it = ITEM[id];
-  const url = LIB + it.path.replace(/^library\//, '') + it.maps[MOBILE ? '1k' : '2k'];
+  const url = LIB + it.path.replace(/^library\//, '') + it.maps[res];
   pending++; progress();
   const p = new HDRLoader().setDataType(THREE.FloatType).loadAsync(url).then(t => { loaded++; progress(); return t; });
-  hdrCache.set(id, p); return p;
+  hdrCache.set(key, p); return p;
 }
 /* equirect half-float texture with optional desaturation (keeps the purple dusk cast out of the lighting) */
 function hdrTex(src, sat) {
@@ -495,9 +496,9 @@ const TOD = {
 const LIGHT = { down: 12, wash: 8, up: 3, glow: 0.35, led: 5, lens: 14 };   // candela-style intensities (physical units)
 let tod = 'evening', lightsOn = true;
 const skyTex = {};
-async function skyFor(key) {
-  const T = TOD[key], id = CFG.skies[T.sky].id, k = id + '|' + T.sat + '|' + T.bsat;
-  if (!skyTex[k]) { const raw = await loadHDR(id); skyTex[k] = { bg: hdrTex(raw, T.bsat), env: hdrTex(raw, T.sat) }; }
+async function skyFor(key, res = '1k') {
+  const T = TOD[key], id = CFG.skies[T.sky].id, k = id + '|' + res + '|' + T.sat + '|' + T.bsat;
+  if (!skyTex[k]) { const raw = await loadHDR(id, res); skyTex[k] = { bg: hdrTex(raw, T.bsat), env: hdrTex(raw, T.sat) }; }
   return skyTex[k];
 }
 async function applyTime() {
@@ -764,20 +765,42 @@ function decorate(src, W, H, o) {
 }
 /* quick raster capture of the live view */
 function captureRaster(target, o) {
-  const { W, H, W0, H0 } = outSize(target), pr0 = renderer.getPixelRatio();
-  sizeAll(W, H, 1); renderFrame();
-  const out = decorate(renderer.domElement, W, H, o);
-  sizeAll(W0, H0, pr0); touch();
-  return { canvas: out, W, H };
+  const pr0 = renderer.getPixelRatio();
+  for (const t of [target, Math.min(target, 1600)]) {   // a smaller retry if the big frame comes back empty (memory limits on tablets/phones)
+    const { W, H, W0, H0 } = outSize(t);
+    sizeAll(W, H, 1); renderFrame();
+    const raw = grab(W, H, () => {});
+    sizeAll(W0, H0, pr0); touch();
+    if (!isBlank(raw)) return { canvas: decorate(raw, W, H, o), W, H };
+  }
+  return null;
+}
+/* true when a capture came back empty (all transparent or all black), e.g. after a lost graphics context */
+function isBlank(src) {
+  if (renderer.getContext().isContextLost()) return true;
+  const c = document.createElement('canvas'); c.width = c.height = 48; const g = c.getContext('2d', { willReadFrequently: true });
+  g.drawImage(src, 0, 0, 48, 48); const d = g.getImageData(0, 0, 48, 48).data;
+  let mx = 0; for (let i = 0; i < d.length; i += 4) if (d[i + 3] > 8) mx = Math.max(mx, d[i], d[i + 1], d[i + 2]);
+  return mx < 6;
 }
 function download(canvas, name) {
-  return new Promise(res => canvas.toBlob(b => {
-    const a = document.createElement('a'), url = URL.createObjectURL(b);
-    a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000); res();
-  }, 'image/png'));
+  return new Promise(res => {
+    const save = url => { const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); res(true); };
+    try {
+      canvas.toBlob(b => {
+        if (b && b.size) { const url = URL.createObjectURL(b); save(url); setTimeout(() => URL.revokeObjectURL(url), 60000); }
+        else { try { save(canvas.toDataURL('image/png')); } catch (e) { res(false); } }
+      }, 'image/png');
+    } catch (e) { res(false); }
+  });
 }
+const FAIL_MSG = 'The image came out empty on this device. Try a smaller size, or Quick PNG.';
 const fileBase = () => 'Heights_Island_' + VIEWS[activeView].n.replace(/[^A-Za-z0-9]+/g, '') + '_' + stamp();
-function quickPng() { const r = captureRaster(+$('capScale').value, { logo: true, caption: $('capBrand').checked }); download(r.canvas, fileBase() + '.png').then(() => toast('Saved ' + r.W + ' × ' + r.H + ' PNG')); }
+async function quickPng() {
+  const r = captureRaster(+$('capScale').value, { logo: true, caption: $('capBrand').checked });
+  if (!r) { toast(FAIL_MSG); return; }
+  toast(await download(r.canvas, fileBase() + '.png') ? 'Saved ' + r.W + ' × ' + r.H + ' PNG' : 'Could not save the PNG');
+}
 
 /* ---------- photo-real render (progressive path tracing) ---------- */
 let busy = false, PTmod = null;
@@ -798,8 +821,14 @@ async function renderPhoto(opts) {
   const fog = scene.fog; scene.fog = null;
   const exp0 = renderer.toneMappingExposure; renderer.toneMappingExposure = exp0 * Math.pow(2, TOD[tod].photoExp || 0);  // covered areas read darker in a real light simulation
   const em = [LED.emissiveIntensity, LENS.emissiveIntensity]; LED.emissiveIntensity *= 0.4; LENS.emissiveIntensity *= 0.35;
+  const bg0 = scene.background, env0 = scene.environment;
   try {
     await nextFrame();
+    if (!MOBILE) {   // sharper 2K sky for the photo, fetched only now
+      ph.txt.textContent = 'Loading the sharp sky…';
+      try { const S2 = await skyFor(tod, '2k'); scene.environment = S2.env; if (bg0 && bg0.isTexture) scene.background = S2.bg; } catch (e) { console.warn('2K sky unavailable', e); }
+      if (ph.cancel) throw new Error('cancelled');
+    }
     if (!PTmod) PTmod = await import('three-gpu-pathtracer');
     renderer.setPixelRatio(1); renderer.setSize(W, H, false);
     pt = new PTmod.WebGLPathTracer(renderer);
@@ -824,23 +853,32 @@ async function renderPhoto(opts) {
     }
     if (!ph.cancel) {
       ph.txt.textContent = 'Cleaning up the image…'; ph.eta.textContent = ''; await nextFrame();
-      const color = grab(W, H, () => { const q = new FullScreenQuad(pt._quad.material); pt._quad.material.map = pt.target.texture; renderer.setRenderTarget(null); q.render(renderer); });
+      const color = grab(W, H, () => { const q = new FullScreenQuad(pt._quad.material); pt._quad.material.map = pt.target.texture; pt._quad.material.opacity = 1; renderer.setRenderTarget(null); q.render(renderer); });
+      if (isBlank(color)) throw new Error('empty path-traced frame');
       let clean = null;
       try { clean = await aiDenoise(color, W, H); } catch (e) { console.warn('AI denoiser unavailable', e); }
+      if (clean && isBlank(clean)) { console.warn('AI denoiser returned an empty image'); clean = null; }
       if (!clean) {   // fallback: edge-aware smoothing on the GPU
         const dn = new PTmod.DenoiseMaterial({ map: pt.target.texture, sigma: 2.2, kSigma: 1.0, threshold: pt.samples < 200 ? 0.08 : 0.04 });
         clean = grab(W, H, () => { const q = new FullScreenQuad(dn); renderer.setRenderTarget(null); q.render(renderer); q.dispose(); });
         dn.dispose();
+        if (isBlank(clean)) clean = color;   // last resort: the un-smoothed render
       }
       result = decorate(clean, W, H, opts);
       ph.bar.style.width = '100%'; ph.txt.textContent = 'Done · ' + Math.floor(pt.samples) + ' passes';
     }
   } catch (e) {
-    console.error(e); toast('The photo renderer is not supported on this device. Saving the live view instead.');
-    renderer.setPixelRatio(pr0); sizeAll(W0, H0, pr0);
-    result = captureRaster(target, opts).canvas;
+    if (pt) { pt.dispose(); pt = null; }
+    scene.background = bg0; scene.environment = env0;
+    if (!ph.cancel) {
+      console.error(e); toast('The photo renderer did not work on this device. Saving the live view instead.');
+      renderer.setPixelRatio(pr0); sizeAll(W0, H0, pr0);
+      const r = captureRaster(target, opts); result = r ? r.canvas : null;
+      if (!r) toast(FAIL_MSG);
+    }
   } finally {
     if (pt) pt.dispose();
+    scene.background = bg0; scene.environment = env0;
     hidden.forEach(d => { d.visible = true; }); scene.fog = fog; LED.emissiveIntensity = em[0]; LENS.emissiveIntensity = em[1]; renderer.toneMappingExposure = exp0;
     sizeAll(W0, H0, pr0); controls.enabled = !fp.on; busy = false; ph.el.hidden = true; touch();
   }
@@ -899,7 +937,7 @@ async function aiDenoise(colorCanvas, W, H) {
 }
 async function photoPng() {
   const r = await renderPhoto({ logo: true, caption: $('capBrand').checked });
-  if (r) { await download(r.canvas, fileBase() + '_photo.png'); toast('Saved ' + r.W + ' × ' + r.H + ' photo'); }
+  if (r) toast(await download(r.canvas, fileBase() + '_photo.png') ? 'Saved ' + r.W + ' × ' + r.H + ' photo' : 'Could not save the PNG');
 }
 
 /* ---------- PDF summary: photo, materials, dimensions and general notes on A4 ---------- */

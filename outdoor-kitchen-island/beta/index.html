@@ -6,8 +6,8 @@
 <title>Heights Contracting 3D Renderer</title>
 <meta name="robots" content="noindex,nofollow">
 <meta name="color-scheme" content="dark">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" type="image/png" href="assets/logo-white.png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 /* Layout: sticky brand bar, then viewer (view chips, 3D stage with overlay controls, estimate table) beside an options panel. Dark only. */
 :root{
@@ -187,6 +187,12 @@ button.ghost{background:transparent;color:var(--fg);border-color:var(--line2);fo
 
   <aside class="panel">
     <div class="card">
+      <h2>Materials</h2>
+      <p class="sub">Pick a finish for each part. The colour box tints it.</p>
+      <div class="mrow" id="pvcRow"><label for="pvcSel">PVC cover</label><i class="chip" id="pvcChip"></i><select id="pvcSel"></select><input type="color" id="pvcCustom" value="#e6e2b0" aria-label="Custom PVC colour"></div>
+      <div id="matRows"></div>
+    </div>
+    <div class="card">
       <h2>Scene</h2>
       <div class="seg4" role="group" aria-label="Time of day">
         <button class="b" id="tod-morning" type="button" aria-pressed="false">Morning</button><button class="b" id="tod-day" type="button" aria-pressed="false">Day</button><button class="b" id="tod-evening" type="button" aria-pressed="true">Evening</button><button class="b" id="tod-night" type="button" aria-pressed="false">Night</button>
@@ -200,12 +206,6 @@ button.ghost{background:transparent;color:var(--fg);border-color:var(--line2);fo
       <div class="row"><span>Live graphics</span>
         <div class="seg"><button class="b" id="gHQ" aria-pressed="true" type="button">High</button><button class="b" id="gStd" aria-pressed="false" type="button">Standard</button></div>
       </div>
-    </div>
-    <div class="card">
-      <h2>Materials</h2>
-      <p class="sub">Pick a finish for each part. The colour box tints it.</p>
-      <div class="mrow" id="pvcRow"><label for="pvcSel">PVC cover</label><i class="chip" id="pvcChip"></i><select id="pvcSel"></select><input type="color" id="pvcCustom" value="#e6e2b0" aria-label="Custom PVC colour"></div>
-      <div id="matRows"></div>
     </div>
     <div class="card cap">
       <h2>Photo &amp; export</h2>
