@@ -8,7 +8,7 @@ Read `ARCHITECTURE.md` before changing anything. In short:
 - Each project lives in its own kebab-case folder with `index.html`, `project.json`, `materials.json`, `assets/`.
   Projects read textures and skies from `../library/` (listed in `materials.json`); no CDNs, no base64 texture bundles.
 - New versions of a live project go to `<slug>/beta/` first; replace the live folder only after the owner approves.
-- Add every new project as a card in the root `index.html`.
+- The home page is behind a login (Apps Script backend in `admin/apps-script/`, URL in `config.js`). Never put credentials or the project list in the website code; new project cards are added through **Manage projects** on the home page.
 - Test before pushing: local http server, desktop + 390×844 phone screenshots, PNG and PDF export, no console errors.
 - Respect the budgets: ≤ 25 MB per file, first load ≤ 15 MB desktop / ≤ 8 MB phone, site < 1 GB.
 - Only CC0 assets (ambientCG, Poly Haven) or Heights' own photos.

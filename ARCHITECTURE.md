@@ -21,7 +21,9 @@ Branches:
 
 ```
 Design/
-├── index.html               project home page (one card per project + Resources)
+├── index.html               login + project home (cards come from the login backend)
+├── config.js                URL of the login backend
+├── admin/apps-script/       login backend (Google Apps Script) + SETUP.md
 ├── README.md                short overview
 ├── ARCHITECTURE.md          this file
 ├── CLAUDE.md                instructions for Claude sessions working in this repo
@@ -42,6 +44,15 @@ Design/
     ├── assets/              project-only files (vendor libs, logo copy, renders, models)
     └── beta/                (optional) next version under test; replaces the parent when approved
 ```
+
+## Access
+
+- The home page (`/Design/`) asks for a username and password. The check runs in a Google Apps Script web app
+  (`admin/apps-script/Code.gs`) that stores the credentials as a salted hash in Script Properties, issues 12-hour signed
+  tokens, locks a user for 10 minutes after 5 failed attempts, and stores the list of project cards.
+- Project URLs (`/Design/<slug>/`) open directly with no login, so customers can be sent a direct link.
+- The repo itself is public. Full privacy would need a private repo (paid GitHub plan) or Cloudflare Pages.
+- New project → add its card with **Manage projects** on the home page (or ask Claude).
 
 ## Material library rules
 
@@ -76,7 +87,7 @@ Every project folder must be self-contained, apart from what it reads from `../l
    ```
    Pages are served over http(s), so textures are loaded at runtime. Do not inline them as base64.
 4. **`project.json`**: `{ "title", "description", "thumbnail", "status": "live|beta|draft", "updated" }`.
-   Add a card for the project to the root `index.html`.
+   Add the project's card through **Manage projects** on the home page.
 5. **Renderer standard** (3D customer viewers):
    - dark theme
    - Heights logo on every PNG; the caption is optional
