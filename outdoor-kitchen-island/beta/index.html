@@ -210,12 +210,12 @@ button.ghost{background:transparent;color:var(--fg);border-color:var(--line2);fo
     <div class="card cap">
       <h2>Photo &amp; export</h2>
       <div class="row" style="margin-top:0"><span>Render</span>
-        <select id="ptQuality"><option value="studio" selected>Photo · a few seconds</option><option value="320">Light simulation · ~1 min (experimental)</option><option value="1000">Light simulation · ~3 min (experimental)</option></select></div>
+        <select id="ptQuality"><option value="320" selected>Realistic · ~1 min</option><option value="1000">Realistic best · ~3 min</option><option value="studio">Quick preview · seconds</option></select></div>
       <div class="row"><span>Size</span>
         <select id="capScale"><option value="1920">HD · 1920 px</option><option value="2560" selected>2.5K · 2560 px</option><option value="3840">4K · 3840 px</option></select></div>
       <label class="chk"><input type="checkbox" id="capBrand" checked> Add caption</label>
       <div class="btn2"><button class="b wide" id="bPhoto" type="button">Photo PNG</button><button class="b wide" id="bPhotoPdf" type="button">Photo PDF</button></div>
-      <p class="note">Images are always landscape. Photo renders the current view at full quality with smooth edges and soft shadows. The light simulation (laptops only) traces real light bounces; it is slower, and if the graphics chip cannot run it a standard photo is made instead.</p>
+      <p class="note">Images are always landscape. Realistic runs a real light simulation of the current view with a progress bar (phones take longer; press Finish now to stop early). If a device cannot run it, a quick preview is made instead.</p>
     </div>
   </aside>
   <section class="info">

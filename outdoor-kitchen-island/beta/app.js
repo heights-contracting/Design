@@ -852,15 +852,15 @@ async function simFrames(W, H, spp) {
     hidden.forEach(d => { d.visible = false; }); scene.fog = null;
     renderer.toneMappingExposure = exp0 * Math.pow(2, TOD[tod].photoExp || 0);   // covered areas read darker in a real light simulation
     LED.emissiveIntensity *= 0.4; LENS.emissiveIntensity *= 0.35;
-    ph.txt.textContent = 'Loading the sharp sky…';
-    try { const S2 = await skyFor(tod, '2k'); scene.environment = S2.env; if (bg0 && bg0.isTexture) scene.background = S2.bg; } catch (e) { console.warn('2K sky unavailable', e); }
+    if (!MOBILE) { ph.txt.textContent = 'Loading the sharp sky…';
+    try { const S2 = await skyFor(tod, '2k'); scene.environment = S2.env; if (bg0 && bg0.isTexture) scene.background = S2.bg; } catch (e) { console.warn('2K sky unavailable', e); } }
     if (ph.cancel) return null;
     if (!PTmod) PTmod = await import('three-gpu-pathtracer');
     renderer.setPixelRatio(1); renderer.setSize(W, H, false);
     pt = new PTmod.WebGLPathTracer(renderer);
     pt.renderDelay = 0; pt.fadeDuration = 0; pt.minSamples = 0; pt.dynamicLowRes = false; pt.rasterizeScene = false;
     pt.renderScale = 1; pt.bounces = 6; pt.transmissiveBounces = 4; pt.filterGlossyFactor = 0.5;
-    pt.tiles.set(2, 2); pt.textureSize.set(1024, 1024);
+    pt.tiles.set(MOBILE ? 3 : 2, MOBILE ? 3 : 2); pt.textureSize.set(1024, 1024);
     // drop invalid samples: some graphics drivers optimise the library's own check away, and one bad sample turns a pixel black for good
     const m = pt._pathTracer && pt._pathTracer.material;
     if (m && m.fragmentShader) { const fs = m.fragmentShader.replace(/gl_FragColor\.a \*= opacity;(\s*#if DEBUG_MODE == 1)/, NAN_GUARD + 'gl_FragColor.a *= opacity;$1'); if (fs !== m.fragmentShader) { m.fragmentShader = fs; m.needsUpdate = true; } }
@@ -871,7 +871,7 @@ async function simFrames(W, H, spp) {
       pt.renderSample();
       const now = performance.now();
       if (now - lastPrev > 400 || pt.samples >= spp) {
-        lastPrev = now; showPreview(renderer.domElement); showProgress(pt.samples / spp, 'Light simulation…', t0);
+        lastPrev = now; showPreview(renderer.domElement); showProgress(pt.samples / spp, 'Rendering photo… ' + Math.floor(pt.samples) + ' / ' + spp + ' passes ·', t0);
         if (!checked && pt.samples >= 24) { checked = true; if (darkShare(ref, renderer.domElement) > 0.25) throw new Error('simulation renders black on this graphics chip'); }
       }
       await nextFrame();
@@ -907,14 +907,14 @@ async function renderPhoto(opts) {
   try {
     await nextFrame();
     for (const t of [target, Math.min(target, 1600)]) {   // a smaller retry if the frame comes back empty (memory limits)
-      const { W, H } = photoSize(t);
+      const { W, H } = photoSize(MOBILE && mode !== 'studio' ? Math.min(t, 1600) : t);   // phones: keep the light simulation to a size they can finish
       setAspect(W / H);
       ph.prev.width = Math.min(960, W); ph.prev.height = Math.round(ph.prev.width * H / W);
       const pg = ph.prev.getContext('2d'); pg.fillStyle = '#000'; pg.fillRect(0, 0, ph.prev.width, ph.prev.height);
       let img = null;
-      if (mode !== 'studio' && !MOBILE) {
+      if (mode !== 'studio') {
         try { img = await simFrames(W, H, +mode); }
-        catch (e) { console.warn(e); if (!ph.cancel) toast('The light simulation does not work on this graphics chip. Making a standard photo instead.'); }
+        catch (e) { console.warn(e); if (!ph.cancel) toast('The realistic render does not work on this device. Making a quick preview instead.'); }
       }
       if (!img && !ph.cancel) { try { img = await studioFrames(W, H); } catch (e) { console.warn(e); } }
       if (ph.cancel) break;
@@ -1025,7 +1025,6 @@ async function exportPdf() {
     toast('PDF saved');
   } catch (e) { console.error(e); toast('Could not create the PDF'); }
 }
-if (MOBILE) [...$('ptQuality').options].filter(o => o.value !== 'studio').forEach(o => o.remove());   // the light simulation is for laptops only
 $('bSnap').addEventListener('click', photoPng); $('bPhoto').addEventListener('click', photoPng);
 $('bPhotoPdf').addEventListener('click', exportPdf); $('bPdf').addEventListener('click', exportPdf);
 
