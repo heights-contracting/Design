@@ -171,7 +171,7 @@ button.ghost{background:transparent;color:var(--fg);border-color:var(--line2);fo
     <div class="stage" id="stage">
       <div class="labels" id="labels"></div>
       <div class="ov ov-tl"><button id="bProj" type="button" title="Switch perspective / orthographic">Perspective</button></div>
-      <div class="ov ov-tr"><button id="bSnap" type="button" title="Render a photo-real image of this view">
+      <div class="ov ov-tr"><button id="bSnap" type="button" title="Render a high-quality photo of this view">
         <svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg>Photo</button></div>
       <div class="ov ov-r">
         <button id="bZin" type="button" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -209,14 +209,13 @@ button.ghost{background:transparent;color:var(--fg);border-color:var(--line2);fo
     </div>
     <div class="card cap">
       <h2>Photo &amp; export</h2>
-      <div class="row" style="margin-top:0"><span>Quality</span>
-        <select id="ptQuality"><option value="96">Quick · ~20 s</option><option value="320" selected>High · ~1 min</option><option value="1000">Best · ~3 min</option></select></div>
+      <div class="row" style="margin-top:0"><span>Render</span>
+        <select id="ptQuality"><option value="studio" selected>Photo · a few seconds</option><option value="320">Light simulation · ~1 min (experimental)</option><option value="1000">Light simulation · ~3 min (experimental)</option></select></div>
       <div class="row"><span>Size</span>
         <select id="capScale"><option value="1920">HD · 1920 px</option><option value="2560" selected>2.5K · 2560 px</option><option value="3840">4K · 3840 px</option></select></div>
       <label class="chk"><input type="checkbox" id="capBrand" checked> Add caption</label>
       <div class="btn2"><button class="b wide" id="bPhoto" type="button">Photo PNG</button><button class="b wide" id="bPhotoPdf" type="button">Photo PDF</button></div>
-      <button class="b wide ghost" id="bSnap2" type="button">Quick PNG (instant)</button>
-      <p class="note">Photo runs a real light simulation of the current view and finishes with a progress bar. Times are for a laptop; phones take longer.</p>
+      <p class="note">Images are always landscape. Photo renders the current view at full quality with smooth edges and soft shadows. The light simulation (laptops only) traces real light bounces; it is slower, and if the graphics chip cannot run it a standard photo is made instead.</p>
     </div>
   </aside>
   <section class="info">

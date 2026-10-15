@@ -532,7 +532,7 @@ function buildPost() {
     const rt = new THREE.WebGLRenderTarget(w * DPR, h * DPR, { type: THREE.HalfFloatType, samples: 4 });
     composer = new EffectComposer(renderer, rt); composer.setPixelRatio(1); composer.setSize(w * DPR, h * DPR);
     renderPass = new RenderPass(scene, cam); composer.addPass(renderPass);
-    bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), 0.3, 0.45, 0.85); composer.addPass(bloomPass);
+    bloomPass = new UnrealBloomPass(new THREE.Vector2(w, h), TOD[tod].bloom, 0.45, 0.85); composer.addPass(bloomPass);
     composer.addPass(new OutputPass());
     return true;
   } catch (e) { console.warn('post-processing unavailable', e); composer = null; return false; }
@@ -723,14 +723,6 @@ function sizeAll(W, H, pr) {
   renderer.setPixelRatio(pr); renderer.setSize(W, H, false);
   if (composer) { composer.setPixelRatio(1); composer.setSize(Math.round(W * pr), Math.round(H * pr)); }
 }
-function outSize(target) {
-  const W0 = stage.clientWidth, H0 = stage.clientHeight, asp = W0 / H0;
-  let W = asp >= 1 ? target : Math.round(target * asp), H = asp >= 1 ? Math.round(target / asp) : target;
-  const mx = Math.min(renderer.capabilities.maxTextureSize || 4096, 8192), budget = MOBILE ? 6e6 : 16e6;
-  const k = Math.min(1, mx / Math.max(W, H), Math.sqrt(budget / (W * H)));
-  if (k < 1) { W = Math.floor(W * k); H = Math.floor(H * k); }
-  return { W, H, W0, H0 };
-}
 function matSummary() {
   return [['PVC cover', pvcName()]].concat(CFG.slots.map(sd => [sd.label, itemName(SLOT[sd.key].id) + (SLOT[sd.key].tint.toLowerCase() !== (sd.tint || '#ffffff').toLowerCase() ? ' (tinted ' + SLOT[sd.key].tint.toUpperCase() + ')' : '')]));
 }
@@ -763,18 +755,6 @@ function decorate(src, W, H, o) {
   }
   return out;
 }
-/* quick raster capture of the live view */
-function captureRaster(target, o) {
-  const pr0 = renderer.getPixelRatio();
-  for (const t of [target, Math.min(target, 1600)]) {   // a smaller retry if the big frame comes back empty (memory limits on tablets/phones)
-    const { W, H, W0, H0 } = outSize(t);
-    sizeAll(W, H, 1); renderFrame();
-    const raw = grab(W, H, () => {});
-    sizeAll(W0, H0, pr0); touch();
-    if (!isBlank(raw)) return { canvas: decorate(raw, W, H, o), W, H };
-  }
-  return null;
-}
 /* true when a capture came back empty (all transparent or all black), e.g. after a lost graphics context */
 function isBlank(src) {
   if (renderer.getContext().isContextLost()) return true;
@@ -794,93 +774,157 @@ function download(canvas, name) {
     } catch (e) { res(false); }
   });
 }
-const FAIL_MSG = 'The image came out empty on this device. Try a smaller size, or Quick PNG.';
+const FAIL_MSG = 'The image came out empty on this device. Try a smaller size.';
 const fileBase = () => 'Heights_Island_' + VIEWS[activeView].n.replace(/[^A-Za-z0-9]+/g, '') + '_' + stamp();
-async function quickPng() {
-  const r = captureRaster(+$('capScale').value, { logo: true, caption: $('capBrand').checked });
-  if (!r) { toast(FAIL_MSG); return; }
-  toast(await download(r.canvas, fileBase() + '.png') ? 'Saved ' + r.W + ' × ' + r.H + ' PNG' : 'Could not save the PNG');
-}
 
-/* ---------- photo-real render (progressive path tracing) ---------- */
+/* ---------- photo export ----------
+   Every export is landscape (3:2), whatever the shape of the screen.
+   Standard photo: the live renderer at full quality, many frames with tiny camera shifts and a slightly moving sun
+   averaged together (smooth edges, soft shadows). A few seconds, works on any device.
+   Light simulation (laptops, experimental): progressive path tracing; if it fails, the standard photo is made instead. */
+const PHOTO_ASPECT = 3 / 2;
 let busy = false, PTmod = null;
 const ph = { el: $('photo'), bar: $('phBar'), txt: $('phTxt'), eta: $('phEta'), prev: $('phPrev'), cancel: false, finish: false };
 $('phCancel').addEventListener('click', () => { ph.cancel = true; });
 $('phStop').addEventListener('click', () => { ph.finish = true; });
 const nextFrame = () => new Promise(r => requestAnimationFrame(() => r()));
-async function renderPhoto(opts) {
-  if (busy) return null; busy = true; ph.cancel = ph.finish = false;
-  const target = opts.size || +$('capScale').value, spp = Math.max(8, Math.round((opts.samples || +$('ptQuality').value) * (MOBILE ? 0.5 : 1)));
-  ph.el.hidden = false; ph.bar.style.width = '0%'; ph.txt.textContent = 'Preparing the scene…'; ph.eta.textContent = '';
-  stopAuto(); controls.enabled = false;
-  const { W, H, W0, H0 } = outSize(MOBILE ? Math.min(target, 1600) : target), pr0 = renderer.getPixelRatio();
-  ph.prev.width = Math.min(960, W); ph.prev.height = Math.round(ph.prev.width * H / W);
-  const pg = ph.prev.getContext('2d'); pg.fillStyle = '#000'; pg.fillRect(0, 0, ph.prev.width, ph.prev.height);
-  let pt = null, result = null;
-  const hidden = decals.filter(d => d.visible); hidden.forEach(d => { d.visible = false; });
-  const fog = scene.fog; scene.fog = null;
-  const exp0 = renderer.toneMappingExposure; renderer.toneMappingExposure = exp0 * Math.pow(2, TOD[tod].photoExp || 0);  // covered areas read darker in a real light simulation
-  const em = [LED.emissiveIntensity, LENS.emissiveIntensity]; LED.emissiveIntensity *= 0.4; LENS.emissiveIntensity *= 0.35;
-  const bg0 = scene.background, env0 = scene.environment;
+const halton = (i, b) => { let f = 1, r = 0; while (i > 0) { f /= b; r += f * (i % b); i = Math.floor(i / b); } return r; };
+function photoSize(target) {
+  let W = Math.round(target), H = Math.round(target / PHOTO_ASPECT);
+  const mx = Math.min(renderer.capabilities.maxTextureSize || 4096, 8192), budget = MOBILE ? 6e6 : 16e6;
+  const k = Math.min(1, mx / W, Math.sqrt(budget / (W * H)));
+  return k < 1 ? { W: Math.floor(W * k), H: Math.floor(H * k) } : { W, H };
+}
+function setAspect(a) {
+  persp.aspect = a; persp.updateProjectionMatrix();
+  Object.assign(ortho, { left: -ORTHO_HALF * a, right: ORTHO_HALF * a, top: ORTHO_HALF, bottom: -ORTHO_HALF }); ortho.updateProjectionMatrix();
+}
+function showProgress(done, what, t0) {
+  const el = (performance.now() - t0) / 1000, rem = done > 0.02 ? el * (1 - done) / done : 0;
+  ph.bar.style.width = (done * 100).toFixed(1) + '%';
+  ph.txt.textContent = what + ' ' + Math.floor(done * 100) + '%';
+  ph.eta.textContent = done > 0.02 && done < 1 ? 'about ' + (rem > 90 ? Math.round(rem / 60) + ' min' : Math.max(1, Math.round(rem)) + ' s') + ' left' : '';
+}
+function showPreview(src) { ph.prev.getContext('2d').drawImage(src, 0, 0, ph.prev.width, ph.prev.height); }
+
+/* standard photo: average of jittered frames from the live renderer */
+async function studioFrames(W, H) {
+  const n = MOBILE ? 16 : 32, t0 = performance.now();
+  const post0 = USE_POST, sm0 = sun.shadow.mapSize.x, sp0 = sun.position.clone();
+  const setSM = s => { sun.shadow.mapSize.set(s, s); if (sun.shadow.map) { sun.shadow.map.dispose(); sun.shadow.map = null; } };
+  const dir = sp0.clone().sub(sun.target.position), rad = dir.length() * 0.012;   // sun disc of about 1.4 degrees: soft shadow edges
+  const u = new THREE.Vector3().crossVectors(dir, new THREE.Vector3(0, 1, 0)).normalize(), v = new THREE.Vector3().crossVectors(dir, u).normalize();
+  const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const ag = acc.getContext('2d');
   try {
-    await nextFrame();
-    if (!MOBILE) {   // sharper 2K sky for the photo, fetched only now
-      ph.txt.textContent = 'Loading the sharp sky…';
-      try { const S2 = await skyFor(tod, '2k'); scene.environment = S2.env; if (bg0 && bg0.isTexture) scene.background = S2.bg; } catch (e) { console.warn('2K sky unavailable', e); }
-      if (ph.cancel) throw new Error('cancelled');
+    if (CAN_POST) USE_POST = !!(composer || buildPost());   // full-quality look on phones too
+    setSM(MOBILE ? 2048 : 4096); sizeAll(W, H, 1);
+    for (let i = 0; i < n && !ph.cancel && !(ph.finish && i >= 4); i++) {
+      cam.setViewOffset(W, H, halton(i + 1, 2) - 0.5, halton(i + 1, 3) - 0.5, W, H);
+      const ang = 2 * Math.PI * halton(i + 1, 5), r = rad * Math.sqrt(halton(i + 1, 7));
+      sun.position.copy(sp0).addScaledVector(u, Math.cos(ang) * r).addScaledVector(v, Math.sin(ang) * r);
+      renderFrame();
+      if (i === 0 && isBlank(renderer.domElement)) throw new Error('empty frame');
+      ag.globalAlpha = 1 / (i + 1); ag.drawImage(renderer.domElement, 0, 0);
+      showPreview(acc); showProgress((i + 1) / n, 'Rendering photo…', t0);
+      await nextFrame();
     }
+  } finally {
+    cam.clearViewOffset(); sun.position.copy(sp0); setSM(sm0); USE_POST = post0;
+  }
+  return ph.cancel ? null : acc;
+}
+
+/* light simulation: progressive path tracing (laptops) */
+const NAN_GUARD = 'if ( any( equal( floatBitsToUint( gl_FragColor ) & 0x7f800000u, uvec4( 0x7f800000u ) ) ) ) gl_FragColor = vec4( 0.0 );\n';
+function darkShare(ref, img) {   // share of pixels lit in the normal view but black in the simulation (a broken graphics driver)
+  const sm = c => { const k = document.createElement('canvas'); k.width = 64; k.height = 43; const g = k.getContext('2d', { willReadFrequently: true }); g.drawImage(c, 0, 0, 64, 43); return g.getImageData(0, 0, 64, 43).data; };
+  const a = sm(ref), b = sm(img); let lit = 0, bad = 0;
+  for (let i = 0; i < a.length; i += 4) if (Math.max(a[i], a[i + 1], a[i + 2]) > 30) { lit++; if (Math.max(b[i], b[i + 1], b[i + 2]) < 4) bad++; }
+  return lit ? bad / lit : 0;
+}
+async function simFrames(W, H, spp) {
+  let pt = null;
+  const hidden = decals.filter(d => d.visible), fog = scene.fog, exp0 = renderer.toneMappingExposure;
+  const em = [LED.emissiveIntensity, LENS.emissiveIntensity], bg0 = scene.background, env0 = scene.environment;
+  try {
+    sizeAll(W, H, 1); renderFrame();
+    const ref = grab(W, H, () => {});
+    hidden.forEach(d => { d.visible = false; }); scene.fog = null;
+    renderer.toneMappingExposure = exp0 * Math.pow(2, TOD[tod].photoExp || 0);   // covered areas read darker in a real light simulation
+    LED.emissiveIntensity *= 0.4; LENS.emissiveIntensity *= 0.35;
+    ph.txt.textContent = 'Loading the sharp sky…';
+    try { const S2 = await skyFor(tod, '2k'); scene.environment = S2.env; if (bg0 && bg0.isTexture) scene.background = S2.bg; } catch (e) { console.warn('2K sky unavailable', e); }
+    if (ph.cancel) return null;
     if (!PTmod) PTmod = await import('three-gpu-pathtracer');
     renderer.setPixelRatio(1); renderer.setSize(W, H, false);
     pt = new PTmod.WebGLPathTracer(renderer);
     pt.renderDelay = 0; pt.fadeDuration = 0; pt.minSamples = 0; pt.dynamicLowRes = false; pt.rasterizeScene = false;
     pt.renderScale = 1; pt.bounces = 6; pt.transmissiveBounces = 4; pt.filterGlossyFactor = 0.5;
-    pt.tiles.set(MOBILE ? 3 : 2, MOBILE ? 3 : 2);
-    pt.textureSize.set(1024, 1024);
+    pt.tiles.set(2, 2); pt.textureSize.set(1024, 1024);
+    // drop invalid samples: some graphics drivers optimise the library's own check away, and one bad sample turns a pixel black for good
+    const m = pt._pathTracer && pt._pathTracer.material;
+    if (m && m.fragmentShader) { const fs = m.fragmentShader.replace(/gl_FragColor\.a \*= opacity;(\s*#if DEBUG_MODE == 1)/, NAN_GUARD + 'gl_FragColor.a *= opacity;$1'); if (fs !== m.fragmentShader) { m.fragmentShader = fs; m.needsUpdate = true; } }
     ph.txt.textContent = 'Building the light model…'; await nextFrame(); await nextFrame();
     pt.setScene(scene, cam);
-    const t0 = performance.now(); let lastPrev = 0;
+    const t0 = performance.now(); let lastPrev = 0, checked = false;
     while (pt.samples < spp && !ph.cancel && !ph.finish) {
       pt.renderSample();
       const now = performance.now();
       if (now - lastPrev > 400 || pt.samples >= spp) {
-        lastPrev = now; pg.drawImage(renderer.domElement, 0, 0, ph.prev.width, ph.prev.height);
-        const done = pt.samples / spp, el = (now - t0) / 1000, rem = done > 0.02 ? el * (1 - done) / done : 0;
-        ph.bar.style.width = (done * 100).toFixed(1) + '%';
-        ph.txt.textContent = 'Rendering photo… ' + Math.floor(done * 100) + '% · ' + Math.floor(pt.samples) + ' / ' + spp + ' passes';
-        ph.eta.textContent = done > 0.02 ? 'about ' + (rem > 90 ? Math.round(rem / 60) + ' min' : Math.max(1, Math.round(rem)) + ' s') + ' left' : '';
+        lastPrev = now; showPreview(renderer.domElement); showProgress(pt.samples / spp, 'Light simulation…', t0);
+        if (!checked && pt.samples >= 24) { checked = true; if (darkShare(ref, renderer.domElement) > 0.25) throw new Error('simulation renders black on this graphics chip'); }
       }
       await nextFrame();
     }
-    if (!ph.cancel) {
-      ph.txt.textContent = 'Cleaning up the image…'; ph.eta.textContent = ''; await nextFrame();
-      const color = grab(W, H, () => { const q = new FullScreenQuad(pt._quad.material); pt._quad.material.map = pt.target.texture; pt._quad.material.opacity = 1; renderer.setRenderTarget(null); q.render(renderer); });
-      if (isBlank(color)) throw new Error('empty path-traced frame');
-      let clean = null;
-      try { clean = await aiDenoise(color, W, H); } catch (e) { console.warn('AI denoiser unavailable', e); }
-      if (clean && isBlank(clean)) { console.warn('AI denoiser returned an empty image'); clean = null; }
-      if (!clean) {   // fallback: edge-aware smoothing on the GPU
-        const dn = new PTmod.DenoiseMaterial({ map: pt.target.texture, sigma: 2.2, kSigma: 1.0, threshold: pt.samples < 200 ? 0.08 : 0.04 });
-        clean = grab(W, H, () => { const q = new FullScreenQuad(dn); renderer.setRenderTarget(null); q.render(renderer); q.dispose(); });
-        dn.dispose();
-        if (isBlank(clean)) clean = color;   // last resort: the un-smoothed render
-      }
-      result = decorate(clean, W, H, opts);
-      ph.bar.style.width = '100%'; ph.txt.textContent = 'Done · ' + Math.floor(pt.samples) + ' passes';
+    if (ph.cancel) return null;
+    ph.txt.textContent = 'Cleaning up the image…'; ph.eta.textContent = ''; await nextFrame();
+    const color = grab(W, H, () => { const q = new FullScreenQuad(pt._quad.material); pt._quad.material.map = pt.target.texture; pt._quad.material.opacity = 1; renderer.setRenderTarget(null); q.render(renderer); });
+    if (isBlank(color) || darkShare(ref, color) > 0.25) throw new Error('empty or black simulation');
+    let clean = null;
+    try { clean = await aiDenoise(color, W, H); } catch (e) { console.warn('AI denoiser unavailable', e); }
+    if (clean && isBlank(clean)) { console.warn('AI denoiser returned an empty image'); clean = null; }
+    if (!clean) {   // fallback: edge-aware smoothing on the GPU
+      const dn = new PTmod.DenoiseMaterial({ map: pt.target.texture, sigma: 2.2, kSigma: 1.0, threshold: pt.samples < 200 ? 0.08 : 0.04 });
+      clean = grab(W, H, () => { const q = new FullScreenQuad(dn); renderer.setRenderTarget(null); q.render(renderer); q.dispose(); });
+      dn.dispose();
+      if (isBlank(clean)) clean = color;
     }
-  } catch (e) {
-    if (pt) { pt.dispose(); pt = null; }
-    scene.background = bg0; scene.environment = env0;
-    if (!ph.cancel) {
-      console.error(e); toast('The photo renderer did not work on this device. Saving the live view instead.');
-      renderer.setPixelRatio(pr0); sizeAll(W0, H0, pr0);
-      const r = captureRaster(target, opts); result = r ? r.canvas : null;
-      if (!r) toast(FAIL_MSG);
-    }
+    return clean;
   } finally {
     if (pt) pt.dispose();
     scene.background = bg0; scene.environment = env0;
     hidden.forEach(d => { d.visible = true; }); scene.fog = fog; LED.emissiveIntensity = em[0]; LENS.emissiveIntensity = em[1]; renderer.toneMappingExposure = exp0;
-    sizeAll(W0, H0, pr0); controls.enabled = !fp.on; busy = false; ph.el.hidden = true; touch();
+  }
+}
+
+async function renderPhoto(opts) {
+  if (busy) return null; busy = true; ph.cancel = ph.finish = false;
+  const mode = $('ptQuality').value, target = opts.size || +$('capScale').value;
+  const W0 = stage.clientWidth, H0 = stage.clientHeight, pr0 = renderer.getPixelRatio();
+  ph.el.hidden = false; ph.bar.style.width = '0%'; ph.txt.textContent = 'Preparing the scene…'; ph.eta.textContent = '';
+  stopAuto(); controls.enabled = false;
+  let result = null;
+  try {
+    await nextFrame();
+    for (const t of [target, Math.min(target, 1600)]) {   // a smaller retry if the frame comes back empty (memory limits)
+      const { W, H } = photoSize(t);
+      setAspect(W / H);
+      ph.prev.width = Math.min(960, W); ph.prev.height = Math.round(ph.prev.width * H / W);
+      const pg = ph.prev.getContext('2d'); pg.fillStyle = '#000'; pg.fillRect(0, 0, ph.prev.width, ph.prev.height);
+      let img = null;
+      if (mode !== 'studio' && !MOBILE) {
+        try { img = await simFrames(W, H, +mode); }
+        catch (e) { console.warn(e); if (!ph.cancel) toast('The light simulation does not work on this graphics chip. Making a standard photo instead.'); }
+      }
+      if (!img && !ph.cancel) { try { img = await studioFrames(W, H); } catch (e) { console.warn(e); } }
+      if (ph.cancel) break;
+      if (img && !isBlank(img)) { result = decorate(img, W, H, opts); ph.bar.style.width = '100%'; break; }
+      if (t <= 1600) break;
+    }
+    if (!result && !ph.cancel) toast(FAIL_MSG);
+  } finally {
+    busy = false; ph.el.hidden = true; controls.enabled = !fp.on;
+    sizeAll(W0, H0, pr0); resize(); touch();
   }
   return result ? { canvas: result, W: result.width, H: result.height } : null;
 }
@@ -943,7 +987,7 @@ async function photoPng() {
 /* ---------- PDF summary: photo, materials, dimensions and general notes on A4 ---------- */
 async function exportPdf() {
   if (!window.jspdf) { toast('The PDF tool did not load.'); return; }
-  const cap = await renderPhoto({ logo: false, caption: false, size: MOBILE ? 1600 : 2400 });
+  const cap = await renderPhoto({ logo: false, caption: false, size: 2400 });
   if (!cap) return;
   try {
     const img = cap.canvas.toDataURL('image/jpeg', 0.92);
@@ -981,9 +1025,9 @@ async function exportPdf() {
     toast('PDF saved');
   } catch (e) { console.error(e); toast('Could not create the PDF'); }
 }
+if (MOBILE) [...$('ptQuality').options].filter(o => o.value !== 'studio').forEach(o => o.remove());   // the light simulation is for laptops only
 $('bSnap').addEventListener('click', photoPng); $('bPhoto').addEventListener('click', photoPng);
 $('bPhotoPdf').addEventListener('click', exportPdf); $('bPdf').addEventListener('click', exportPdf);
-$('bSnap2').addEventListener('click', quickPng);
 
 /* ---------- loop ---------- */
 function resize() {
@@ -1042,4 +1086,4 @@ stateReady = true;
 setGraphics(HQ);
 resize(); goTo(0, true);
 requestAnimationFrame(frame);
-window.__hc = { scene, touch, goTo, setTod, setSlot, renderPhoto, exportPdf, quickPng, setGraphics, SLOT, TOD, LIGHT, applyTime, get cam() { return cam; }, setLights(o) { lightsOn = o; applyTime(); } };
+window.__hc = { scene, touch, goTo, setTod, setSlot, renderPhoto, exportPdf, setGraphics, SLOT, TOD, LIGHT, applyTime, get cam() { return cam; }, setLights(o) { lightsOn = o; applyTime(); } };
