@@ -1,0 +1,22 @@
+{
+ "id": "ScatteredLeaves009",
+ "name": "Scattered Leaves 009",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=ScatteredLeaves009",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#906d39",
+ "path": "library/surfaces/ground/ScatteredLeaves009/"
+}

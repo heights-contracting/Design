@@ -1,0 +1,22 @@
+{
+ "id": "Carpet016",
+ "name": "Carpet 016",
+ "kind": "surface",
+ "category": "fabric",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Carpet016",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "ao": "ao.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#bbb093",
+ "path": "library/surfaces/fabric/Carpet016/"
+}

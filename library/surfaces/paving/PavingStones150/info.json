@@ -1,0 +1,22 @@
+{
+ "id": "PavingStones150",
+ "name": "Paving Stones 150",
+ "kind": "surface",
+ "category": "paving",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=PavingStones150",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "ao": "ao.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#7c715d",
+ "path": "library/surfaces/paving/PavingStones150/"
+}

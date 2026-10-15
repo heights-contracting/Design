@@ -1,0 +1,21 @@
+{
+ "id": "Wood092",
+ "name": "Wood 092",
+ "kind": "surface",
+ "category": "wood",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Wood092",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#af723f",
+ "path": "library/surfaces/wood/Wood092/"
+}

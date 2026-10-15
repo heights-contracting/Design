@@ -1,0 +1,22 @@
+{
+ "id": "Metal048A",
+ "name": "Metal 048A",
+ "kind": "surface",
+ "category": "metal",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Metal048A",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg",
+  "metalness": "metalness.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#fee29c",
+ "path": "library/surfaces/metal/Metal048A/"
+}

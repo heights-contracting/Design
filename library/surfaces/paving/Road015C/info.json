@@ -1,0 +1,22 @@
+{
+ "id": "Road015C",
+ "name": "Road 015C",
+ "kind": "surface",
+ "category": "paving",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Road015C",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "ao": "ao.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg"
+ },
+ "avg": "#3d3c3a",
+ "path": "library/surfaces/paving/Road015C/"
+}

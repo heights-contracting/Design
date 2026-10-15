@@ -1,0 +1,21 @@
+{
+ "id": "PaintedPlaster017",
+ "name": "Painted Plaster 017",
+ "kind": "surface",
+ "category": "plaster-concrete",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=PaintedPlaster017",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "roughness": "roughness.jpg",
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#bebebb",
+ "path": "library/surfaces/plaster-concrete/PaintedPlaster017/"
+}

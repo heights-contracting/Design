@@ -1,0 +1,21 @@
+{
+ "id": "Onyx015",
+ "name": "Onyx 015",
+ "kind": "surface",
+ "category": "stone",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Onyx015",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#cdcac7",
+ "path": "library/surfaces/stone/Onyx015/"
+}

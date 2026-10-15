@@ -2,7 +2,9 @@
 
 | Folder | What |
 |---|---|
-| `library/` | Shared textures, skies and logos (upload here) |
+| `library/` | Shared material library (surfaces, skies, logos) – browse at `/library/` |
 | `outdoor-kitchen-island/` | Outdoor kitchen & island renderer |
+| `tools/` | Scripts (texture ingest) |
 
-Live site (after GitHub Pages is on): `https://heights-contracting.github.io/design/`
+Site: `https://heights-contracting.github.io/Design/`
+How the repo is organised and how to add a project: **[ARCHITECTURE.md](ARCHITECTURE.md)**.

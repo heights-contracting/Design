@@ -1,0 +1,22 @@
+{
+ "id": "Gravel043",
+ "name": "Gravel 043",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Gravel043",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#6a6b67",
+ "path": "library/surfaces/ground/Gravel043/"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "Wood058",
+ "name": "Wood 058",
+ "kind": "surface",
+ "category": "wood",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Wood058",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "normal": "normal.jpg",
+  "color": "color.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#a0795b",
+ "path": "library/surfaces/wood/Wood058/"
+}

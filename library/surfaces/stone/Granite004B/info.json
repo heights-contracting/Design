@@ -1,0 +1,21 @@
+{
+ "id": "Granite004B",
+ "name": "Granite 004B",
+ "kind": "surface",
+ "category": "stone",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Granite004B",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#8f7d66",
+ "path": "library/surfaces/stone/Granite004B/"
+}

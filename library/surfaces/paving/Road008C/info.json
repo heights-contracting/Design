@@ -1,0 +1,22 @@
+{
+ "id": "Road008C",
+ "name": "Road 008C",
+ "kind": "surface",
+ "category": "paving",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Road008C",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg",
+  "ao": "ao.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#41413e",
+ "path": "library/surfaces/paving/Road008C/"
+}

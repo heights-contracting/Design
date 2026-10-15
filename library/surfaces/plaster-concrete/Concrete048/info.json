@@ -1,0 +1,23 @@
+{
+ "id": "Concrete048",
+ "name": "Concrete 048",
+ "kind": "surface",
+ "category": "plaster-concrete",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Concrete048",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "color": "color.jpg",
+  "metalness": "metalness.jpg",
+  "ao": "ao.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#a29787",
+ "path": "library/surfaces/plaster-concrete/Concrete048/"
+}

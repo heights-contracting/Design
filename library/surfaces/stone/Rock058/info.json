@@ -1,0 +1,22 @@
+{
+ "id": "Rock058",
+ "name": "Rock 058",
+ "kind": "surface",
+ "category": "stone",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Rock058",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#4e545b",
+ "path": "library/surfaces/stone/Rock058/"
+}

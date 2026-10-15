@@ -1,0 +1,22 @@
+{
+ "id": "Ground103",
+ "name": "Ground 103",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Ground103",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "ao": "ao.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#7a6851",
+ "path": "library/surfaces/ground/Ground103/"
+}

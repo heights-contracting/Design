@@ -1,0 +1,21 @@
+{
+ "id": "clay_plaster",
+ "name": "Clay plaster",
+ "kind": "surface",
+ "category": "plaster-concrete",
+ "source": "Poly Haven",
+ "licence": "CC0",
+ "url": "https://polyhaven.com/a/clay_plaster",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#72593b",
+ "path": "library/surfaces/plaster-concrete/clay_plaster/"
+}

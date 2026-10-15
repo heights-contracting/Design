@@ -1,0 +1,22 @@
+{
+ "id": "Rock063",
+ "name": "Rock 063",
+ "kind": "surface",
+ "category": "stone",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Rock063",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg",
+  "ao": "ao.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#817831",
+ "path": "library/surfaces/stone/Rock063/"
+}

@@ -1,0 +1,22 @@
+{
+ "id": "Ground112",
+ "name": "Ground 112",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Ground112",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg",
+  "roughness": "roughness.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg"
+ },
+ "avg": "#756756",
+ "path": "library/surfaces/ground/Ground112/"
+}

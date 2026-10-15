@@ -1,0 +1,18 @@
+{
+ "id": "kiara_1_dawn",
+ "name": "Kiara 1 dawn",
+ "kind": "sky",
+ "category": "sky",
+ "source": "Poly Haven",
+ "licence": "CC0",
+ "url": "https://polyhaven.com/a/kiara_1_dawn",
+ "size": [
+  4096,
+  2048
+ ],
+ "maps": {
+  "2k": "kiara_1_dawn_2k.hdr",
+  "1k": "kiara_1_dawn_1k.hdr"
+ },
+ "path": "library/skies/kiara_1_dawn/"
+}

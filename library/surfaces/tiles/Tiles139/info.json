@@ -1,0 +1,21 @@
+{
+ "id": "Tiles139",
+ "name": "Tiles 139",
+ "kind": "surface",
+ "category": "tiles",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Tiles139",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#b39f89",
+ "path": "library/surfaces/tiles/Tiles139/"
+}

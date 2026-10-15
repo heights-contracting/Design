@@ -1,0 +1,22 @@
+{
+ "id": "Bricks097",
+ "name": "Bricks 097",
+ "kind": "surface",
+ "category": "brick",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Bricks097",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg"
+ },
+ "avg": "#856a53",
+ "path": "library/surfaces/brick/Bricks097/"
+}

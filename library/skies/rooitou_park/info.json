@@ -1,0 +1,18 @@
+{
+ "id": "rooitou_park",
+ "name": "Rooitou park",
+ "kind": "sky",
+ "category": "sky",
+ "source": "Poly Haven",
+ "licence": "CC0",
+ "url": "https://polyhaven.com/a/rooitou_park",
+ "size": [
+  4096,
+  2048
+ ],
+ "maps": {
+  "2k": "rooitou_park_2k.hdr",
+  "1k": "rooitou_park_1k.hdr"
+ },
+ "path": "library/skies/rooitou_park/"
+}

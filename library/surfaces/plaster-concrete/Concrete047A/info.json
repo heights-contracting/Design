@@ -1,0 +1,22 @@
+{
+ "id": "Concrete047A",
+ "name": "Concrete 047A",
+ "kind": "surface",
+ "category": "plaster-concrete",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Concrete047A",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#908773",
+ "path": "library/surfaces/plaster-concrete/Concrete047A/"
+}

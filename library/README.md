@@ -1,22 +1,23 @@
-# Heights design library
+# Heights material library
 
-Shared materials used by every project in this repo. Upload once, reuse everywhere.
+Shared surfaces and skies used by every project. Browse it visually at
+`https://heights-contracting.github.io/Design/library/`.
 
 ```
 library/
-├── surfaces/   one folder per surface (each has a README saying what to add)
-├── skies/      HDR skies for lighting
-├── brand/      Heights logos
-└── inbox/      anything unsorted
+├── index.html      visual catalogue (reads catalog.json)
+├── catalog.json    list of every item – generated, do not edit by hand
+├── surfaces/<category>/<id>/
+│     color.jpg  normal.jpg  roughness.jpg  [ao.jpg displacement.jpg metalness.jpg]
+│     preview.jpg  info.json
+├── skies/<id>/     <id>_2k.hdr  <id>_1k.hdr  preview.jpg  info.json
+├── brand/          Heights logos
+└── inbox/          upload new downloads here
 ```
 
-## Quick rules
-- **Colour photos → JPG** (high quality). **Normal / displacement maps → PNG** when offered.
-- **2K** resolution; 4K only for floor and island top.
-- Max **25 MB per file** when uploading through the GitHub website.
-- Only free/commercial-use textures (ambientCG and Poly Haven are CC0) or your own photos.
+- Categories: tiles, stone, brick, plaster-concrete, wood, metal, paving, ground, fabric.
+- Ids are the original asset ids (e.g. `Tiles138`, `dark_wood`), so the source page is always findable.
+- Web files are capped at 2K. Original zips / 4K EXRs live on the **`sources`** branch (not published).
+- Everything here is CC0 (ambientCG, Poly Haven) or Heights' own photos.
 
-## Priority for the outdoor kitchen
-1. floor-porcelain · island-top-stone · wall-stone · wood-pergola-dark · stainless-steel · skies (dusk)
-2. cladding-stone · cabinet-fronts · wood-pergola-natural
-3. planter-concrete · ground-outside
+To add items: see `inbox/README.md`.

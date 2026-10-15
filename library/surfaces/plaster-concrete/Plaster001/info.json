@@ -1,0 +1,21 @@
+{
+ "id": "Plaster001",
+ "name": "Plaster 001",
+ "kind": "surface",
+ "category": "plaster-concrete",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Plaster001",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#d7d3cf",
+ "path": "library/surfaces/plaster-concrete/Plaster001/"
+}

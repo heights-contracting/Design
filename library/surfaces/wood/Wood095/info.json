@@ -1,0 +1,21 @@
+{
+ "id": "Wood095",
+ "name": "Wood 095",
+ "kind": "surface",
+ "category": "wood",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Wood095",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#cc9c6e",
+ "path": "library/surfaces/wood/Wood095/"
+}

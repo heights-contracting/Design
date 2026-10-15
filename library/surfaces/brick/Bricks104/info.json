@@ -1,0 +1,22 @@
+{
+ "id": "Bricks104",
+ "name": "Bricks 104",
+ "kind": "surface",
+ "category": "brick",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Bricks104",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "ao": "ao.jpg",
+  "color": "color.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg"
+ },
+ "avg": "#a67863",
+ "path": "library/surfaces/brick/Bricks104/"
+}

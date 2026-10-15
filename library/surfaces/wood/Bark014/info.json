@@ -1,0 +1,22 @@
+{
+ "id": "Bark014",
+ "name": "Bark 014",
+ "kind": "surface",
+ "category": "wood",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Bark014",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "ao": "ao.jpg"
+ },
+ "avg": "#796650",
+ "path": "library/surfaces/wood/Bark014/"
+}

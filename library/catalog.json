@@ -1,0 +1,1407 @@
+{
+ "items": [
+  {
+   "id": "Bricks075A",
+   "name": "Bricks 075A",
+   "kind": "surface",
+   "category": "brick",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bricks075A",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#8d836d",
+   "path": "library/surfaces/brick/Bricks075A/"
+  },
+  {
+   "id": "Bricks097",
+   "name": "Bricks 097",
+   "kind": "surface",
+   "category": "brick",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bricks097",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#856a53",
+   "path": "library/surfaces/brick/Bricks097/"
+  },
+  {
+   "id": "Bricks102",
+   "name": "Bricks 102",
+   "kind": "surface",
+   "category": "brick",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bricks102",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#817459",
+   "path": "library/surfaces/brick/Bricks102/"
+  },
+  {
+   "id": "Bricks104",
+   "name": "Bricks 104",
+   "kind": "surface",
+   "category": "brick",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bricks104",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#a67863",
+   "path": "library/surfaces/brick/Bricks104/"
+  },
+  {
+   "id": "Bricks105",
+   "name": "Bricks 105",
+   "kind": "surface",
+   "category": "brick",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bricks105",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#b8946a",
+   "path": "library/surfaces/brick/Bricks105/"
+  },
+  {
+   "id": "Carpet016",
+   "name": "Carpet 016",
+   "kind": "surface",
+   "category": "fabric",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Carpet016",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#bbb093",
+   "path": "library/surfaces/fabric/Carpet016/"
+  },
+  {
+   "id": "Fabric084",
+   "name": "Fabric 084",
+   "kind": "surface",
+   "category": "fabric",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Fabric084",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#5b8dbf",
+   "path": "library/surfaces/fabric/Fabric084/"
+  },
+  {
+   "id": "Fabric085",
+   "name": "Fabric 085",
+   "kind": "surface",
+   "category": "fabric",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Fabric085",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg"
+   },
+   "avg": "#9f5035",
+   "path": "library/surfaces/fabric/Fabric085/"
+  },
+  {
+   "id": "Grass001",
+   "name": "Grass 001",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Grass001",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#445b28",
+   "path": "library/surfaces/ground/Grass001/"
+  },
+  {
+   "id": "Grass005",
+   "name": "Grass 005",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Grass005",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg"
+   },
+   "avg": "#65832b",
+   "path": "library/surfaces/ground/Grass005/"
+  },
+  {
+   "id": "Gravel043",
+   "name": "Gravel 043",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Gravel043",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#6a6b67",
+   "path": "library/surfaces/ground/Gravel043/"
+  },
+  {
+   "id": "Ground037",
+   "name": "Ground 037",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground037",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#989257",
+   "path": "library/surfaces/ground/Ground037/"
+  },
+  {
+   "id": "Ground054",
+   "name": "Ground 054",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground054",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#9b8a6d",
+   "path": "library/surfaces/ground/Ground054/"
+  },
+  {
+   "id": "Ground068",
+   "name": "Ground 068",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground068",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#6e5b2a",
+   "path": "library/surfaces/ground/Ground068/"
+  },
+  {
+   "id": "Ground103",
+   "name": "Ground 103",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground103",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#7a6851",
+   "path": "library/surfaces/ground/Ground103/"
+  },
+  {
+   "id": "Ground106",
+   "name": "Ground 106",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground106",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#756147",
+   "path": "library/surfaces/ground/Ground106/"
+  },
+  {
+   "id": "Ground108",
+   "name": "Ground 108",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground108",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#786a54",
+   "path": "library/surfaces/ground/Ground108/"
+  },
+  {
+   "id": "Ground109",
+   "name": "Ground 109",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground109",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#7d6e54",
+   "path": "library/surfaces/ground/Ground109/"
+  },
+  {
+   "id": "Ground110",
+   "name": "Ground 110",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground110",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#635a4e",
+   "path": "library/surfaces/ground/Ground110/"
+  },
+  {
+   "id": "Ground112",
+   "name": "Ground 112",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Ground112",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#756756",
+   "path": "library/surfaces/ground/Ground112/"
+  },
+  {
+   "id": "ScatteredLeaves009",
+   "name": "Scattered Leaves 009",
+   "kind": "surface",
+   "category": "ground",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=ScatteredLeaves009",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#906d39",
+   "path": "library/surfaces/ground/ScatteredLeaves009/"
+  },
+  {
+   "id": "CorrugatedSteel009",
+   "name": "Corrugated Steel 009",
+   "kind": "surface",
+   "category": "metal",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=CorrugatedSteel009",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "ao": "ao.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "metalness": "metalness.jpg"
+   },
+   "avg": "#818181",
+   "path": "library/surfaces/metal/CorrugatedSteel009/"
+  },
+  {
+   "id": "Metal046B",
+   "name": "Metal 046B",
+   "kind": "surface",
+   "category": "metal",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Metal046B",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "metalness": "metalness.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#3e3e3e",
+   "path": "library/surfaces/metal/Metal046B/"
+  },
+  {
+   "id": "Metal048A",
+   "name": "Metal 048A",
+   "kind": "surface",
+   "category": "metal",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Metal048A",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "metalness": "metalness.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#fee29c",
+   "path": "library/surfaces/metal/Metal048A/"
+  },
+  {
+   "id": "Metal049A",
+   "name": "Metal 049A",
+   "kind": "surface",
+   "category": "metal",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Metal049A",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "metalness": "metalness.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#fbfaf5",
+   "path": "library/surfaces/metal/Metal049A/"
+  },
+  {
+   "id": "Metal063",
+   "name": "Metal 063",
+   "kind": "surface",
+   "category": "metal",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Metal063",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "metalness": "metalness.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#6e6d6a",
+   "path": "library/surfaces/metal/Metal063/"
+  },
+  {
+   "id": "PavingStones138",
+   "name": "Paving Stones 138",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=PavingStones138",
+   "size": [
+    1024,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#97906f",
+   "path": "library/surfaces/paving/PavingStones138/"
+  },
+  {
+   "id": "PavingStones150",
+   "name": "Paving Stones 150",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=PavingStones150",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "ao": "ao.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#7c715d",
+   "path": "library/surfaces/paving/PavingStones150/"
+  },
+  {
+   "id": "PavingStones151",
+   "name": "Paving Stones 151",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=PavingStones151",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#766e62",
+   "path": "library/surfaces/paving/PavingStones151/"
+  },
+  {
+   "id": "Road008C",
+   "name": "Road 008C",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Road008C",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#41413e",
+   "path": "library/surfaces/paving/Road008C/"
+  },
+  {
+   "id": "Road011C",
+   "name": "Road 011C",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Road011C",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#3f3f3c",
+   "path": "library/surfaces/paving/Road011C/"
+  },
+  {
+   "id": "Road012C",
+   "name": "Road 012C",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Road012C",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#41413e",
+   "path": "library/surfaces/paving/Road012C/"
+  },
+  {
+   "id": "Road015C",
+   "name": "Road 015C",
+   "kind": "surface",
+   "category": "paving",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Road015C",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#3d3c3a",
+   "path": "library/surfaces/paving/Road015C/"
+  },
+  {
+   "id": "Concrete046",
+   "name": "Concrete 046",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Concrete046",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#cccdb9",
+   "path": "library/surfaces/plaster-concrete/Concrete046/"
+  },
+  {
+   "id": "Concrete047A",
+   "name": "Concrete 047A",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Concrete047A",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#908773",
+   "path": "library/surfaces/plaster-concrete/Concrete047A/"
+  },
+  {
+   "id": "Concrete048",
+   "name": "Concrete 048",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Concrete048",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "color": "color.jpg",
+    "metalness": "metalness.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#a29787",
+   "path": "library/surfaces/plaster-concrete/Concrete048/"
+  },
+  {
+   "id": "PaintedPlaster017",
+   "name": "Painted Plaster 017",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=PaintedPlaster017",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#bebebb",
+   "path": "library/surfaces/plaster-concrete/PaintedPlaster017/"
+  },
+  {
+   "id": "Plaster001",
+   "name": "Plaster 001",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Plaster001",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#d7d3cf",
+   "path": "library/surfaces/plaster-concrete/Plaster001/"
+  },
+  {
+   "id": "clay_plaster",
+   "name": "Clay plaster",
+   "kind": "surface",
+   "category": "plaster-concrete",
+   "source": "Poly Haven",
+   "licence": "CC0",
+   "url": "https://polyhaven.com/a/clay_plaster",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#72593b",
+   "path": "library/surfaces/plaster-concrete/clay_plaster/"
+  },
+  {
+   "id": "Granite004B",
+   "name": "Granite 004B",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Granite004B",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#8f7d66",
+   "path": "library/surfaces/stone/Granite004B/"
+  },
+  {
+   "id": "Marble016",
+   "name": "Marble 016",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Marble016",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#3d3e3e",
+   "path": "library/surfaces/stone/Marble016/"
+  },
+  {
+   "id": "Onyx015",
+   "name": "Onyx 015",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Onyx015",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#cdcac7",
+   "path": "library/surfaces/stone/Onyx015/"
+  },
+  {
+   "id": "Rock058",
+   "name": "Rock 058",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Rock058",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "ao": "ao.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#4e545b",
+   "path": "library/surfaces/stone/Rock058/"
+  },
+  {
+   "id": "Rock063",
+   "name": "Rock 063",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Rock063",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#817831",
+   "path": "library/surfaces/stone/Rock063/"
+  },
+  {
+   "id": "Rock064",
+   "name": "Rock 064",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Rock064",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#746d47",
+   "path": "library/surfaces/stone/Rock064/"
+  },
+  {
+   "id": "Travertine001",
+   "name": "Travertine 001",
+   "kind": "surface",
+   "category": "stone",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Travertine001",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#a59881",
+   "path": "library/surfaces/stone/Travertine001/"
+  },
+  {
+   "id": "Tiles138",
+   "name": "Tiles 138",
+   "kind": "surface",
+   "category": "tiles",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Tiles138",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "ao": "ao.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#353536",
+   "path": "library/surfaces/tiles/Tiles138/"
+  },
+  {
+   "id": "Tiles139",
+   "name": "Tiles 139",
+   "kind": "surface",
+   "category": "tiles",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Tiles139",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#b39f89",
+   "path": "library/surfaces/tiles/Tiles139/"
+  },
+  {
+   "id": "Tiles140",
+   "name": "Tiles 140",
+   "kind": "surface",
+   "category": "tiles",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Tiles140",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#4f4b48",
+   "path": "library/surfaces/tiles/Tiles140/"
+  },
+  {
+   "id": "Tiles141",
+   "name": "Tiles 141",
+   "kind": "surface",
+   "category": "tiles",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Tiles141",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#d2cac2",
+   "path": "library/surfaces/tiles/Tiles141/"
+  },
+  {
+   "id": "Tiles144",
+   "name": "Tiles 144",
+   "kind": "surface",
+   "category": "tiles",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Tiles144",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#936330",
+   "path": "library/surfaces/tiles/Tiles144/"
+  },
+  {
+   "id": "Bark014",
+   "name": "Bark 014",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Bark014",
+   "size": [
+    1024,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "ao": "ao.jpg"
+   },
+   "avg": "#796650",
+   "path": "library/surfaces/wood/Bark014/"
+  },
+  {
+   "id": "Wood049",
+   "name": "Wood 049",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood049",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#7b634d",
+   "path": "library/surfaces/wood/Wood049/"
+  },
+  {
+   "id": "Wood051",
+   "name": "Wood 051",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood051",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#41342e",
+   "path": "library/surfaces/wood/Wood051/"
+  },
+  {
+   "id": "Wood058",
+   "name": "Wood 058",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood058",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "color": "color.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#a0795b",
+   "path": "library/surfaces/wood/Wood058/"
+  },
+  {
+   "id": "Wood092",
+   "name": "Wood 092",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood092",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#af723f",
+   "path": "library/surfaces/wood/Wood092/"
+  },
+  {
+   "id": "Wood094",
+   "name": "Wood 094",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood094",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "normal": "normal.jpg",
+    "roughness": "roughness.jpg"
+   },
+   "avg": "#a78264",
+   "path": "library/surfaces/wood/Wood094/"
+  },
+  {
+   "id": "Wood095",
+   "name": "Wood 095",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood095",
+   "size": [
+    2048,
+    1024
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg",
+    "color": "color.jpg"
+   },
+   "avg": "#cc9c6e",
+   "path": "library/surfaces/wood/Wood095/"
+  },
+  {
+   "id": "Wood096",
+   "name": "Wood 096",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=Wood096",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "color": "color.jpg",
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#b39d84",
+   "path": "library/surfaces/wood/Wood096/"
+  },
+  {
+   "id": "WoodFloor051",
+   "name": "Wood Floor 051",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=WoodFloor051",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "ao": "ao.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#9a7a5d",
+   "path": "library/surfaces/wood/WoodFloor051/"
+  },
+  {
+   "id": "WoodFloor064",
+   "name": "Wood Floor 064",
+   "kind": "surface",
+   "category": "wood",
+   "source": "ambientCG",
+   "licence": "CC0",
+   "url": "https://ambientcg.com/view?id=WoodFloor064",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "normal": "normal.jpg",
+    "color": "color.jpg",
+    "roughness": "roughness.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#6c4213",
+   "path": "library/surfaces/wood/WoodFloor064/"
+  },
+  {
+   "id": "dark_wood",
+   "name": "Dark wood",
+   "kind": "surface",
+   "category": "wood",
+   "source": "Poly Haven",
+   "licence": "CC0",
+   "url": "https://polyhaven.com/a/dark_wood",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "displacement": "displacement.jpg",
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg"
+   },
+   "avg": "#5c2a17",
+   "path": "library/surfaces/wood/dark_wood/"
+  },
+  {
+   "id": "dark_wooden_planks",
+   "name": "Dark wooden planks",
+   "kind": "surface",
+   "category": "wood",
+   "source": "Poly Haven",
+   "licence": "CC0",
+   "url": "https://polyhaven.com/a/dark_wooden_planks",
+   "size": [
+    2048,
+    2048
+   ],
+   "maps": {
+    "roughness": "roughness.jpg",
+    "color": "color.jpg",
+    "normal": "normal.jpg",
+    "displacement": "displacement.jpg"
+   },
+   "avg": "#53493e",
+   "path": "library/surfaces/wood/dark_wooden_planks/"
+  },
+  {
+   "id": "kiara_1_dawn",
+   "name": "Kiara 1 dawn",
+   "kind": "sky",
+   "category": "sky",
+   "source": "Poly Haven",
+   "licence": "CC0",
+   "url": "https://polyhaven.com/a/kiara_1_dawn",
+   "size": [
+    4096,
+    2048
+   ],
+   "maps": {
+    "2k": "kiara_1_dawn_2k.hdr",
+    "1k": "kiara_1_dawn_1k.hdr"
+   },
+   "path": "library/skies/kiara_1_dawn/"
+  },
+  {
+   "id": "rooitou_park",
+   "name": "Rooitou park",
+   "kind": "sky",
+   "category": "sky",
+   "source": "Poly Haven",
+   "licence": "CC0",
+   "url": "https://polyhaven.com/a/rooitou_park",
+   "size": [
+    4096,
+    2048
+   ],
+   "maps": {
+    "2k": "rooitou_park_2k.hdr",
+    "1k": "rooitou_park_1k.hdr"
+   },
+   "path": "library/skies/rooitou_park/"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "id": "Ground068",
+ "name": "Ground 068",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Ground068",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "ao": "ao.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#6e5b2a",
+ "path": "library/surfaces/ground/Ground068/"
+}

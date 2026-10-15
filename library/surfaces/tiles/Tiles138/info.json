@@ -1,0 +1,22 @@
+{
+ "id": "Tiles138",
+ "name": "Tiles 138",
+ "kind": "surface",
+ "category": "tiles",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Tiles138",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg",
+  "ao": "ao.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg"
+ },
+ "avg": "#353536",
+ "path": "library/surfaces/tiles/Tiles138/"
+}

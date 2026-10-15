@@ -1,0 +1,22 @@
+{
+ "id": "Fabric084",
+ "name": "Fabric 084",
+ "kind": "surface",
+ "category": "fabric",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Fabric084",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "ao": "ao.jpg",
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg"
+ },
+ "avg": "#5b8dbf",
+ "path": "library/surfaces/fabric/Fabric084/"
+}

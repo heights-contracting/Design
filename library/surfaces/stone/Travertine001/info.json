@@ -1,0 +1,22 @@
+{
+ "id": "Travertine001",
+ "name": "Travertine 001",
+ "kind": "surface",
+ "category": "stone",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Travertine001",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "displacement": "displacement.jpg",
+  "roughness": "roughness.jpg",
+  "normal": "normal.jpg",
+  "ao": "ao.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#a59881",
+ "path": "library/surfaces/stone/Travertine001/"
+}

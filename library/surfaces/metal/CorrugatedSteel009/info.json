@@ -1,0 +1,23 @@
+{
+ "id": "CorrugatedSteel009",
+ "name": "Corrugated Steel 009",
+ "kind": "surface",
+ "category": "metal",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=CorrugatedSteel009",
+ "size": [
+  2048,
+  1024
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "ao": "ao.jpg",
+  "displacement": "displacement.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "metalness": "metalness.jpg"
+ },
+ "avg": "#818181",
+ "path": "library/surfaces/metal/CorrugatedSteel009/"
+}

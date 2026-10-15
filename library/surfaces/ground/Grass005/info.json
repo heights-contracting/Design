@@ -1,0 +1,22 @@
+{
+ "id": "Grass005",
+ "name": "Grass 005",
+ "kind": "surface",
+ "category": "ground",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Grass005",
+ "size": [
+  1024,
+  1024
+ ],
+ "maps": {
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "ao": "ao.jpg"
+ },
+ "avg": "#65832b",
+ "path": "library/surfaces/ground/Grass005/"
+}

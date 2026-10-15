@@ -1,0 +1,22 @@
+{
+ "id": "Metal046B",
+ "name": "Metal 046B",
+ "kind": "surface",
+ "category": "metal",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=Metal046B",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "metalness": "metalness.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg",
+  "normal": "normal.jpg",
+  "color": "color.jpg"
+ },
+ "avg": "#3e3e3e",
+ "path": "library/surfaces/metal/Metal046B/"
+}

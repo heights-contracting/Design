@@ -1,0 +1,15 @@
+{
+ "status": "draft – to be confirmed together in step 2 (the live page still uses its built-in textures)",
+ "slots": {
+  "island-top":     { "id": "Concrete048",   "alt": ["Granite004B", "Concrete047A"] },
+  "floor":          { "id": "Tiles139",      "alt": ["Concrete046", "Travertine001"] },
+  "back-wall":      { "id": "Bricks105",     "alt": ["Plaster001", "clay_plaster", "Bricks075A"] },
+  "cladding":       { "id": "Bricks075A",    "alt": ["Rock064"] },
+  "cabinet-fronts": { "id": "Wood051",       "alt": ["dark_wood"] },
+  "pergola-dark":   { "id": "Wood051",       "alt": ["dark_wood", "dark_wooden_planks"] },
+  "pergola-natural":{ "id": "Wood094",       "alt": ["Wood058", "Wood092"] },
+  "stainless":      { "id": "Metal049A",     "alt": ["Metal063"] },
+  "ground":         { "id": "PavingStones150","alt": ["Gravel043", "Grass005"] }
+ },
+ "skies": { "dusk": "kiara_1_dawn", "day": "rooitou_park" }
+}

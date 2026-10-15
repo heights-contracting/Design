@@ -1,0 +1,21 @@
+{
+ "id": "dark_wooden_planks",
+ "name": "Dark wooden planks",
+ "kind": "surface",
+ "category": "wood",
+ "source": "Poly Haven",
+ "licence": "CC0",
+ "url": "https://polyhaven.com/a/dark_wooden_planks",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "roughness": "roughness.jpg",
+  "color": "color.jpg",
+  "normal": "normal.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#53493e",
+ "path": "library/surfaces/wood/dark_wooden_planks/"
+}

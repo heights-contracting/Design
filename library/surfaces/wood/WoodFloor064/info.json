@@ -1,0 +1,21 @@
+{
+ "id": "WoodFloor064",
+ "name": "Wood Floor 064",
+ "kind": "surface",
+ "category": "wood",
+ "source": "ambientCG",
+ "licence": "CC0",
+ "url": "https://ambientcg.com/view?id=WoodFloor064",
+ "size": [
+  2048,
+  2048
+ ],
+ "maps": {
+  "normal": "normal.jpg",
+  "color": "color.jpg",
+  "roughness": "roughness.jpg",
+  "displacement": "displacement.jpg"
+ },
+ "avg": "#6c4213",
+ "path": "library/surfaces/wood/WoodFloor064/"
+}
